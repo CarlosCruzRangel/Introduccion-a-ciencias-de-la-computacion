@@ -1,6 +1,5 @@
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://cdn.discordapp.com/attachments/1009462427257151558/1077264233001123910/gorgonaJAVATRATEX.png" alt="logo" width="340"  height="auto" />
+  <img src="https://cdn.discordapp.com/attachments/1009462427257151558/1077273650564177930/Screenshot_20230220-105939-744.png" alt="logo" width="340"  height="auto" />
   <br/>
 
   <h3><b></b></h3>

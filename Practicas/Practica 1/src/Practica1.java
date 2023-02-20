@@ -51,7 +51,9 @@ public class Practica1 {
             System.out.println("1. Actividad 1");
             System.out.println("2. Actividad 2");
             System.out.println("3. Actividad 3");
-            System.out.println("4. Salir");
+            System.out.println("4. Actividad 4");
+            System.out.println("5. Actividad 5");
+            System.out.println("6. Salir");
  
 
             try {
