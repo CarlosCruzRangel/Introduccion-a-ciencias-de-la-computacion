@@ -15,4 +15,4 @@
 
  _____________________________________
 
- ⌨️ con ❤️ por [CarlosCruzRangel](https://github.com/CarlosCruzRangel)
+ ⌨️ con ❤️ por [Carlos](https://github.com/CarlosCruzRangel) y [Toprak](https://github.com/ToprakShakur)
