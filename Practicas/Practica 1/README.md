@@ -62,7 +62,56 @@ Tener Java 8 o superior.
 
 
 ## ¿Como se corre nuestra práctica?
+### En Linux
+#### Ejecutandolo por primera vez
+* Descomprime el archivo
+* Abre la carpeta que se generó despues de la descompresión
+* Al abrir la carpeta que descomprimio busca el archivo "runLinux.sh"
+* Daras clic derecho sobre el archivo y desplegara un menu daras clic izquierdo en "propiedades"
+![Captura desde 2023-02-21 10-45-34](https://user-images.githubusercontent.com/79823316/220413991-2f28d9a4-2c89-48b6-b11a-f843c7becce7.png)
 
+
+* Se abrira el siguiente menú:
+![Captura desde 2023-02-21 10-45-51](https://user-images.githubusercontent.com/79823316/220414107-bfd066e2-331f-4d94-85cb-9df1f3b49c1b.png)
+
+
+* Daras clic izquierdo en la pestaña "Permisos" y veras lo siguiente:
+![Captura desde 2023-02-21 10-45-57](https://user-images.githubusercontent.com/79823316/220414226-97e2cdf3-7ff5-4100-970c-3e88772cfc92.png)
+
+
+* Marcaras la casilla "Permitir ejecutar el archivo como programa", asi como se muestra en la imagen:
+![Captura desde 2023-02-21 10-46-06](https://user-images.githubusercontent.com/79823316/220414365-4442b7bf-6b4b-4aa9-9be8-77d55ab1d576.png)
+
+* Cerrarás la ventana
+
+* Daras click derecho sobre "runLinux.sh" y daras clic izquierdo sobre "Ejecutar como un programa"
+![Captura desde 2023-02-21 10-46-29](https://user-images.githubusercontent.com/79823316/220414591-b0024a4b-d174-45d0-92ed-b120020f6873.png)
+
+
+* Acontinuación se abrira la terminal integrada de linux, (Se recomienda expandir la ventana) 
+
+![Captura desde 2023-02-21 10-47-19](https://user-images.githubusercontent.com/79823316/220414847-91091515-0f55-4edc-8937-6e0b8e8fece8.png)
+
+* Empezara la compilación automatica, sigue las instrucciones de la terminal.
+
+#### Ejecutandolo despues de la primera vez
+* Solo basta con dar  click derecho sobre "runLinux.sh" y daras clic izquierdo sobre "Ejecutar como un programa"
+![Captura desde 2023-02-21 10-46-29](https://user-images.githubusercontent.com/79823316/220414591-b0024a4b-d174-45d0-92ed-b120020f6873.png)
+
+
+* Acontinuación se abrira la terminal integrada de linux, (Se recomienda expandir la ventana) 
+
+![Captura desde 2023-02-21 10-47-19](https://user-images.githubusercontent.com/79823316/220414847-91091515-0f55-4edc-8937-6e0b8e8fece8.png)
+
+* Empezara la compilación automatica, sigue las instrucciones de la terminal.
+### En Windows
+* Descomprime el archivo
+* Abre la carpeta que se generó despues de la descompresión
+* Al abrir la carpeta que descomprimio busca el archivo "runWindows.bat"
+* Da doble clic izquierdo en "runWindows.bat" 
+* Se abrira Simbolo del sistema y ejecutará la práctica empezando por la compilacion automatica.
+![para icc](https://user-images.githubusercontent.com/79823316/220416533-cd27c5c0-ac45-4fbf-a534-e0f8104c31d4.png)
+* Sigue las instrucciones de la terminal.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
