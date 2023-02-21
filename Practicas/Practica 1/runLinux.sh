@@ -19,7 +19,7 @@ echo "BIENVENIDO $USER A LA PRACTICA UNO "
 echo
 echo "EMPIEZA LA COMPILACION DEL PROYECTO"
 echo
-    cd ../src
+    cd src
     javac Practica1.java
 
 echo "TERMINA LA COMPILACION DEL PROYECTO"
@@ -29,5 +29,5 @@ read
 echo
 \
 echo "EMPIEZA LA EJECUCION DEL PROYECTO"
-    java Main
+    java Practica1
 
