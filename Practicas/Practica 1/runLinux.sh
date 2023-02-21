@@ -17,17 +17,17 @@ echo "BIENVENIDO $USER A LA PRACTICA UNO "
     date
 
 echo
-echo "EMPIEZA LA COMPILACION DEL PROYECTO"
+echo "EMPIEZA LA COMPILACION DE LA PRACTICA 1"
 echo
     cd src
     javac Practica1.java
 
-echo "TERMINA LA COMPILACION DEL PROYECTO"
+echo "TERMINA LA COMPILACION DE LA PRACTICA 1"
 echo
 echo "Presione una tecla para continuar . . ."
 read 
 echo
 \
-echo "EMPIEZA LA EJECUCION DEL PROYECTO"
+echo "EMPIEZA LA EJECUCION DE LA PRACTICA1"
     java Practica1
 
