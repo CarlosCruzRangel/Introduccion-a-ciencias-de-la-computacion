@@ -7,7 +7,7 @@ import java.util.Scanner;
  * y se acaba el programa,caso contrario manda un mensaje al usuario
  * y le dejara nuevamente volver a intentar.
  */
-public class actividad4 {
+public class Actividad4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

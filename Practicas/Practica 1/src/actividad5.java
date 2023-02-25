@@ -1,5 +1,5 @@
 import java.util.Scanner; 
-public class actividad5 {
+public class Actividad5 {
     
     /*
      * Programa que imprime una escalera de asteriscos y una escalera

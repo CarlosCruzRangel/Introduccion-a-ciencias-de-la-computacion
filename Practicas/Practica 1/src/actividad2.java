@@ -1,4 +1,4 @@
-public class actividad2 {
+public class Actividad2 {
 
     /*
      * Programa donde se declara y asignan variables necesarias

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * en caso contrario dara un mensaje de que no es
  * un numero
  */
-public class actividad1 {
+public class Actividad1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String cadena;
