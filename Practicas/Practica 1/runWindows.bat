@@ -1,4 +1,15 @@
-@echo off 
+@echo off
+
+::RUN para windows 
+:: 
+::Programa que compila y corre practica 1
+:: 
+::@author Carlos Cruz Rangel
+::@author Toprak Memik Hernandez
+:: 
+::@since 26 de Febrero 2022
+::@version v1.0
+
 echo
 echo " _______  ___   _______  __    _  __   __  _______  __    _  ___   ______   _______ ";
 echo "|  _    ||   | |       ||  |  | ||  | |  ||       ||  |  | ||   | |      | |       |";
@@ -33,9 +44,8 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
     echo  2     Ejecutar Actividad 2
     echo  3     Ejecutar Actividad 3
     echo  4     Ejecutar Actividad 4   
-    echo  5     Ejecutar Actividad 5 
-    echo  6     Ejecutar Actividad 6  
-    echo  11    Salir 
+    echo  5     Ejecutar Actividad 5  
+    echo  6     Salir 
 
     SET /p var= ^> Seleccione una opcion [1-10]:
 
@@ -45,12 +55,8 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
     if "%var%"=="3" goto op3
     if "%var%"=="4" goto op4
     if "%var%"=="5" goto op5
-    if "%var%"=="6" goto op6
-    if "%var%"=="7" goto op7
-    if "%var%"=="8" goto op8
-    if "%var%"=="9" goto op9
-    if "%var%"=="10" goto op10
-    if "%var%"=="11" goto salir
+    
+    if "%var%"=="6" goto salir
 
     ::Mensaje de error, validación cuando se selecciona una opción fuera de rango
     echo. El numero "%var%" no es una opcion valida, por favor intente de nuevo.
@@ -66,55 +72,54 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
         java Actividad1
 
 
-        color 08
+        
         echo.
         pause
     goto:inicio
 
     :op2
                echo.
-        echo. Has elegido la opcion No. 2 Gray
+        echo. Has elegido la opcion Actividad 2
         echo.
-        echo Ingresa un numero de la matriz de aplicacion solo acepta matriz de 10x10, 100x100, 1000x1000
-        echo si quieres una matriz de 10x10 entonces ingresa 10
-        echo si quieres una matriz de 100x100 entonces ingresa 100
-        echo si quieres una matriz de 1000x1000 entonces ingresa 1000
-        SET var1=0
-        SET /p var1= ^> ingresa tu numero [1-1000]:
-        echo Ingresa un numero de hilos Te recomendamos entre 1 y 1000 hilos
-        SET var2=0
-        SET /p var2= ^> ingresa tu numero [1 - 1000]:
-        echo Tenemos tres ejemplos de imagen con ¿cual quiereres tarabajar? ¿1 o 2 o 3?
-        SET var3=0
-        SET /p var3= ^> ingresa tu numero [1 o 2 o 3]:
-        java -cp ./classes Main %var1% imagenes/javatar%var3%.png 2 false %var2%
-        color 09
+        java Actividad2
+       
+        
         echo.
         pause
     goto:inicio
 
     :op3
         echo.
-        echo. Has elegido la opcion No. 3 Gray
+        echo. Has elegido la opcion Actividad 3
         echo.
-        echo Ingresa un numero de la matriz de aplicacion solo acepta matriz de 10x10, 100x100, 1000x1000
-        echo si quieres una matriz de 10x10 entonces ingresa 10
-        echo si quieres una matriz de 100x100 entonces ingresa 100
-        echo si quieres una matriz de 1000x1000 entonces ingresa 1000
-        SET var1=0
-        SET /p var1= ^> ingresa tu numero [1-1000]:
-        echo Ingresa un numero de hilos Te recomendamos entre 1 y 1000 hilos
-        SET var2=0
-        SET /p var2= ^> ingresa tu numero [1 - 1000]:
-        echo Tenemos tres ejemplos de imagen con ¿cual quiereres tarabajar? ¿1 o 2 o 3?
-        SET var3=0
-        SET /p var3= ^> ingresa tu numero [1 o 2 o 3]:
-        java -cp ./classes Main %var1% imagenes/javatar%var3%.png 3 false %var2%
-        color 0A
+        java Actividad3       
+
+        
         echo.
         pause
    goto:inicio
 
+    :op4
+        echo.
+        echo. Has elegido la opcion Actividad 4
+        echo.
+        java Actividad4       
+
+        
+        echo.
+        pause
+   goto:inicio
+    :op5
+        echo.
+        echo. Has elegido la opcion Actividad 5
+        echo.
+        java Actividad5       
+
+        
+        echo.
+        pause
+   goto:inicio
+    
     :salir
         @cls&exit
 
