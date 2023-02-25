@@ -1,11 +1,20 @@
 import java.util.Scanner;
 
-/*
+/**
+ * Actividad 1 de la práctica 1 de ICC.
+ * 
  * Programa el cual pedira que ingreses 5 cadenas,
  * el programa indicara si la cadena es un NUMERO,
  * en caso contrario dara un mensaje de que no es
  * un numero
+ * 
+ * @author Carlos Cruz Rangel
+ * @author Toprak Memik Hernandez
+ * 
+ * @since 26 de Febrero 2022
+ * @version v1.0
  */
+
 public class Actividad1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
