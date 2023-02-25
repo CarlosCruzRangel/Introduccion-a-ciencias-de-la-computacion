@@ -41,7 +41,17 @@ Declaramos y asignamos las variables que consideramos necesarias para representa
 
 ## Actividad 3
 Escribimos los parentesis necesarios a las operaciones definidas en las variables misterio1 y misterio2 para que la practica pueda compilar y escribimos un comentario sobre como se obtuvo
-    
+
+## Actividad 4
+Escribimos un programa que imprima todos los números pares entre dos números que se le pidan al usuario. Se valida si el primer número que escriben es menos o igual al segundo numero, se imprimen los valores y se acaba el programa ,en caso contrario se le manda un mensaje al usuario pero se le dejara nuevamente volver a intentar.
+
+## Actividad 5
+### Actividad 5.1
+Se creó un programa que dibuje una escalera de asteriscos. El programa le pedira un número al usuario el cual tomaremos como altura de la piramide.
+### Actividad 5.2
+un programa que dibuje una escalera invertida de asteriscos. El programa le pedira un numero al usuario el cual tomaremos como altura de la piramide.
+
+
 ## Hecho con:
 
 Esta practica fue hecha con java.
@@ -53,7 +63,7 @@ Esta practica fue hecha con java.
 
 
 <!-- GETTING STARTED -->
-# Getting Started
+# Como Comenzar
 
 ## Prerequisitos
 
@@ -104,6 +114,9 @@ Tener Java 8 o superior.
 ![Captura desde 2023-02-21 10-47-19](https://user-images.githubusercontent.com/79823316/220414847-91091515-0f55-4edc-8937-6e0b8e8fece8.png)
 
 * Empezara la compilación automatica, sigue las instrucciones de la terminal.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### En Windows
 * Descomprime el archivo
 * Abre la carpeta que se generó despues de la descompresión
