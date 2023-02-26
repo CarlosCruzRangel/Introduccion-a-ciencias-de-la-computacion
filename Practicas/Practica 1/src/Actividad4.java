@@ -22,6 +22,10 @@ public class Actividad4 {
 
         int primerNumero, segundoNumero;
 
+        /**
+         * Le pide al usuario que ingrese dos números y 
+         * luego imprime todos los números pares entre esos dos números.
+         */
         do {
             System.out.print("Escribe el primer numero: ");
             primerNumero = sc.nextInt();

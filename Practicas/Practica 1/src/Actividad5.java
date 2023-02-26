@@ -11,30 +11,54 @@ import java.util.Scanner;
  * @author Toprak Memik Hernandez 419002354
  * 
  * @since 26 de Febrero 2022
- * @vers
+ * @version v1.0
  */
 
 public class Actividad5 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese la altura de la piramide: ");
-        int altura = sc.nextInt();
+        int altura2 = scanner.nextInt();
 
-        for (int i = 0; i < altura; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        System.out.println("\nEscalera:");
+        escalera(altura2);
 
-        System.out.println("\n ");
+        System.out.println("\nEscalera Invertida:");
+        escaleraInvertida(altura2);
 
-        for (int i = altura; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+    }  
+
+    /**
+     * Toma un número entero como argumento e imprime una escalera 
+     * de asteriscos de la misma altura
+     * 
+     * @param altura2 The height of the staircase.
+     */
+    public static void escalera(int altura2) {
+        String escalon = "";
+        for (int i = 0; i < altura2; i++) {
+            escalon += "*";
+            System.out.println(escalon);
         }
     }
+    
+    
+    /**
+     * Toma un número entero como argumento e imprime una escalera
+     * invertida de asteriscos de la misma altura
+     * 
+     * @param altura2 The height of the inverted staircase.
+     */
+    public static void escaleraInvertida(int altura2) {
+        String escalon = "";
+        for (int i = 0; i < altura2; i++) {
+            escalon += "*";
+        }
+        for (int i = altura2; i > 0; i--) {
+            System.out.println(escalon.substring(0, i));
+        }
+    }
+
 }

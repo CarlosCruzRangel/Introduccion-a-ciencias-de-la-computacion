@@ -42,6 +42,32 @@ Declaramos y asignamos las variables que consideramos necesarias para representa
 ## Actividad 3
 Escribimos los parentesis necesarios a las operaciones definidas en las variables misterio1 y misterio2 para que la practica pueda compilar y escribimos un comentario sobre como se obtuvo
 
+#### > Misterioso1
+```
+int misterioso1 = (++valor1) - (--valor2) + (valor2++) + (++valor1);
+```
+la expresión ++valor1, el operador de incremento prefijo significa que el valor de valor1 se incrementa en 1 antes de ser utilizado en la expresión. Por lo tanto, el primer temino vale 35.
+
+En la expresión --valor2, el operador de decremento prefijo significa que el valor de valor2 se decrementa en 1 antes de ser utilizado en la expresión. Por lo tanto, el segundo término es 1.
+
+En la expresión valor2++, el operador de incremento posfijo significa que el valor actual de valor2 se utiliza en la expresión, pero luego se incrementa en 1. Por lo tanto, el tercero es 2.
+
+Finalmente,  valor1 seincrementa en 1 antes de ser utilizado en la expresión. Por lo tanto, el último término es 35. Por lo tanto, el valor de misterioso1 es 35 - 1 + 2 + 35 = 71.
+
+#### > Misterioso2
+```
+int misterioso2 = (valor4++) + (++valor4) + (valor5++) - (--valor5);
+```
+En la expresión valor4++, el operador de incremento posfijo significa que el valor actual de valor4 se utiliza en la expresión, pero luego se incrementa en 1. Por lo tanto, el primer termino es: 9.
+
+la expresión ++valor4, el operador de incremento prefijo significa que el valor de valor4 se incrementa en 1 antes de ser utilizado en la expresión. Por lo tanto, el segundo temino vale 10.
+
+En la expresión valor5++, el operador de incremento posfijo significa que el valor actual de valor5 se utiliza en la expresión, pero luego se incrementa en 1. Por lo tanto, el tercer termino es: 90.
+
+Finalmente,  valor1 seincrementa en 1 antes de ser utilizado en la expresión. Por lo tanto, el último término es 89.
+
+Por lo tanto, el valor de misterioso1 es 9 + 10 + 90 - 89 = 20.
+
 ## Actividad 4
 Escribimos un programa que imprima todos los números pares entre dos números que se le pidan al usuario. Se valida si el primer número que escriben es menos o igual al segundo numero, se imprimen los valores y se acaba el programa ,en caso contrario se le manda un mensaje al usuario pero se le dejara nuevamente volver a intentar.
 
