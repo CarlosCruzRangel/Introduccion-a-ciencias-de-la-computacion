@@ -34,7 +34,7 @@ public class Actividad3 {
          * Finalmente,  valor1 seincrementa en 1 antes de ser utilizado en la expresión. 
          * Por lo tanto, el último término es 35.
          * 
-         * Por lo tanto, el valor de misterioso1 es 35 - 1 + 2 + 35 = 71.
+         * Por lo tanto, misterioso1 es 35 - 1 + 2 + 35 = 71.
          */
         int misterioso1 = (++valor1) - (--valor2) + (valor2++) + (++valor1);
         
@@ -54,7 +54,7 @@ public class Actividad3 {
          * Finalmente,  valor1 seincrementa en 1 antes de ser utilizado en la expresión. 
          * Por lo tanto, el último término es 89.
          * 
-         * Por lo tanto, el valor de misterioso1 es 9 + 10 + 90 - 89 = 20.
+         * Por lo tanto, misterioso2 es 9 + 10 + 90 - 89 = 20.
          */
         int misterioso2 = (valor4++) + (++valor4) + (valor5++) - (--valor5);
 
