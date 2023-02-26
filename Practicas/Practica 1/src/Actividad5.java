@@ -8,7 +8,7 @@ import java.util.Scanner;
  * el cual tomara como altura de la escalera.
  * 
  * @author Carlos Cruz Rangel 312285823
- * @author Toprak Memik Hernandez
+ * @author Toprak Memik Hernandez 419002354
  * 
  * @since 26 de Febrero 2022
  * @vers

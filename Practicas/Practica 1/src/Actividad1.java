@@ -8,8 +8,8 @@ import java.util.Scanner;
  * en caso contrario dara un mensaje de que no es
  * un numero
  * 
- * @author Carlos Cruz Rangel
- * @author Toprak Memik Hernandez
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprak Memik Hernandez 419002354
  * 
  * @since 26 de Febrero 2022
  * @version v1.0

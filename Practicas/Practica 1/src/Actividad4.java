@@ -10,7 +10,7 @@ import java.util.Scanner;
  * y le dejara nuevamente volver a intentar.
  * 
  * @author Carlos Cruz Rangel 312285823
- * @author Toprak Memik Hernandez
+ * @author Toprak Memik Hernandez 419002354
  * 
  * @since 26 de Febrero 2022
  * @version v1.0
