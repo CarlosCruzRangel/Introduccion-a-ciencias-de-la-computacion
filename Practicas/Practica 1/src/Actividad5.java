@@ -7,6 +7,7 @@ import java.util.Scanner;
  * invertida de asteriscos.El programa pedira un numero al usuario
  * el cual tomara como altura de la escalera.
  * 
+ * @author JAVATAR
  * @author Carlos Cruz Rangel 312285823
  * @author Toprak Memik Hernandez 419002354
  * 

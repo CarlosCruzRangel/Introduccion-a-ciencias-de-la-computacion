@@ -6,6 +6,7 @@
  * operadores definidos en java,se imprime el valor de las
  * variables x, y, z, w, v y los resultados de cada operacion.
  *
+ * @author JAVATAR
  * @author Carlos Cruz Rangel 312285823
  * @author Toprak Memik Hernandez 419002354
  * 

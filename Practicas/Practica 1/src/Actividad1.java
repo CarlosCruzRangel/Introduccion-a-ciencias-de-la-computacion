@@ -8,6 +8,7 @@ import java.util.Scanner;
  * en caso contrario dara un mensaje de que no es
  * un numero
  * 
+ * @author JAVATAR
  * @author Carlos Cruz Rangel 312285823
  * @author Toprak Memik Hernandez 419002354
  * 

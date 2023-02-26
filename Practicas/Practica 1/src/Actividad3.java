@@ -1,6 +1,7 @@
 /**
  * Actividad 3 de la práctica 1 de ICC.
  *
+ * @author JAVATAR
  * @author Carlos Cruz Rangel 312285823
  * @author Toprak Memik Hernandez 419002354
  * 

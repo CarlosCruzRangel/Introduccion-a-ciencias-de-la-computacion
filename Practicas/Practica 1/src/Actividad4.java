@@ -9,6 +9,7 @@ import java.util.Scanner;
  * y se acaba el programa,caso contrario manda un mensaje al usuario
  * y le dejara nuevamente volver a intentar.
  * 
+ * @author JAVATAR
  * @author Carlos Cruz Rangel 312285823
  * @author Toprak Memik Hernandez 419002354
  * 
