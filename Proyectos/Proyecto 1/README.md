@@ -48,8 +48,13 @@ Los descuentos creados son realistas, esto esignifica que los porcentajes siempr
 
 ## Hecho con:
 
-Esta practica fue hecha con java.
-* ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) 
+Esta practica fue hecha VSCode usando como lenguaje de programación a java.
+
+* ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2_For_Windows-blue?style=for-the-badge&logo=visualstudiocode)
+
+* ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2--1678_For_Linux-blue?style=for-the-badge&logo=visualstudiocode)
+
+* ![Java](https://img.shields.io/badge/java-10-orange?style=for-the-badge&logo=java) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -70,7 +75,8 @@ Tener Java 8 o superior.
 #### Ejecutandolo por primera vez
 * Descomprime el archivo
 * Abre la carpeta que se generó despues de la descompresión
-* Al abrir la carpeta que descomprimio busca el archivo "runLinux.sh"
+* Al abrir la carpeta que descomprimio busca la carpeta "src" 
+* Busca el archivo "runLinux.sh"
 * Daras clic derecho sobre el archivo y desplegara un menu daras clic izquierdo en "propiedades"
 
 > ![Captura desde 2023-02-21 10-45-34](https://user-images.githubusercontent.com/79823316/220413991-2f28d9a4-2c89-48b6-b11a-f843c7becce7.png)
@@ -118,9 +124,9 @@ Tener Java 8 o superior.
 
 ### En Windows
 * Descomprime el archivo
-* Abre la carpeta que se generó despues de la descompresión
-* Al abrir la carpeta que descomprimio busca el archivo "runWindows.bat"
-* Da doble clic izquierdo en "runWindows.bat" 
+* Abre la carpeta que se generó despues de la descompresión.
+* Al abrir la carpeta que descomprimio busca la carpta "src" adentro encontraras el archivo "runWindows.bat".
+* Da doble clic izquierdo en "runWindows.bat". 
 * Se abrira Simbolo del sistema y ejecutará la práctica empezando por la compilacion automatica.
 > ![para icc](https://user-images.githubusercontent.com/79823316/220416533-cd27c5c0-ac45-4fbf-a534-e0f8104c31d4.png)
 * Sigue las instrucciones de la terminal.
