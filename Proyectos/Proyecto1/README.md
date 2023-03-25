@@ -63,8 +63,6 @@ Esta practica fue hecha VSCode usando como lenguaje de programación a java.
 
 Tener Java 8 o superior.
 
-
-
 ## ¿Como se corre nuestra proyecto?
 ### En Linux
 
@@ -123,7 +121,7 @@ Tener Java 8 o superior.
 ### En Windows 
 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
+![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
 * Descomprime el archivo
 * Abre la carpeta que se generó despues de la descompresión.
 * Al abrir la carpeta que descomprimio busca la carpta "src" adentro encontraras el archivo "runWindows.bat".
