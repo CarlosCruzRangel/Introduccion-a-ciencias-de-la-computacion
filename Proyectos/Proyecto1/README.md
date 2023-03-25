@@ -49,7 +49,7 @@ Esta practica fue hecha VSCode usando como lenguaje de programación a java.
 
 * ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2--1678_For_Linux-blue?style=for-the-badge&logo=visualstudiocode)
 
-* ![Java](https://img.shields.io/badge/java-10-orange?style=for-the-badge&logo=java) 
+* ![Java](https://img.shields.io/badge/java-11-orange?style=for-the-badge&logo=java) 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
