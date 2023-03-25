@@ -1,4 +1,7 @@
 /** 
+ * Los servicios que debe ofrecer un Descuento que puede ser
+ * de tipo porcentaje o de monto se listan en esta interfaz .
+ * 
  * @author Carlos Cruz Rangel
  * @author Toprak Memik Hernandez
  * 
