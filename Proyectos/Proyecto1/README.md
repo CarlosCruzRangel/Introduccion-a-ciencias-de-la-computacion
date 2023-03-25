@@ -5,7 +5,7 @@
 
 
 <!-- PROJECT SHIELDS -->
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Status badge](https://img.shields.io/badge/status-en%20progreso-yellow?style=for-the-badge)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Status badge](https://img.shields.io/badge/status-TERMINADO%20-green?style=for-the-badge)
 
 
 
@@ -41,11 +41,6 @@ Al comprar un producto, si el precio lleva descuento puede ser que sea un porcen
 ## Sobre la implementación
 Los descuentos creados son realistas, esto esignifica que los porcentajes siempre estan entre 0 y 100, mientras que los descuentos de tipo monto solo son positivos.
 
-
-## Árbol de directorios
-
-
-
 ## Hecho con:
 
 Esta practica fue hecha VSCode usando como lenguaje de programación a java.
@@ -72,6 +67,9 @@ Tener Java 8 o superior.
 
 ## ¿Como se corre nuestra proyecto?
 ### En Linux
+
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 #### Ejecutandolo por primera vez
 * Descomprime el archivo
 * Abre la carpeta que se generó despues de la descompresión
@@ -122,7 +120,10 @@ Tener Java 8 o superior.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### En Windows
+### En Windows 
+
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+
 * Descomprime el archivo
 * Abre la carpeta que se generó despues de la descompresión.
 * Al abrir la carpeta que descomprimio busca la carpta "src" adentro encontraras el archivo "runWindows.bat".
@@ -137,13 +138,13 @@ Tener Java 8 o superior.
 
 
 
+__________________________________________________
+# Dificultades
 
-
+Las dificultades presentadas para nosotros fue el entendimiento del descuento y como representarlo como algoritmo, pero facilmente se resolvío debido a la comunicación en tiempo real a tráves de los canales de voz de Discord y la extencion de Live Share de VSCode que nos permitía codear en tiempo real, a ambos, al mismo tiempo.
+__________________________________________________
 <!-- CONTACT -->
 
 > Project Link: [Practicas y tareas de ICC](https://github.com/CarlosCruzRangel/Introduccion-a-ciencias-de-la-computacion)
-
-
-
 
  ⌨️ con ❤️ por [Carlos](https://github.com/CarlosCruzRangel) y [Toprak](https://github.com/ToprakShakur)
