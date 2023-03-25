@@ -1,15 +1,13 @@
-/**
- * Los servicios que debe ofrecer un Descuento que puede ser
- * de tipo porcentaje o de monto se listan en esta interfaz.
- * 
+/** 
  * @author Carlos Cruz Rangel
  * @author Toprak Memik Hernandez
  * 
  * @since Marzo 25 del 2023, UNAM.
  * @version v1.0
- */
+*/
 
 public interface Descontable {
+
     /**
      * Aplica el descuento correspondiente al valor y tipo de
      * del objeto invocante .
@@ -112,4 +110,5 @@ public interface Descontable {
      * @return La cadena correspondiente al descuento .
      */
     public String muestra();
+    
 }
