@@ -1,3 +1,6 @@
+/**
+ * The class DescuentoPorcentaje is a subclass of Descuento
+ */
 public class DescuentoPorcentaje extends Descuento {
 
     public DescuentoPorcentaje(double valor) {
