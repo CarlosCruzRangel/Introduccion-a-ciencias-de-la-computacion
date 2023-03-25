@@ -10,10 +10,7 @@
  * Descuento is an abstract class that implements Descontable and provides a default implementation for
  * all methods except aplica.
  */
-/**
- * Descuento is an abstract class that implements Descontable and provides a default implementation for
- * all of its methods.
- */
+
 public abstract class Descuento implements Descontable {
     
     protected double valor;
@@ -74,4 +71,3 @@ public abstract class Descuento implements Descontable {
     protected abstract Descuento generaDescuento(double valor);
 
 }
-

@@ -27,7 +27,7 @@ public interface Descontable {
      *
      * @param precio El precio al que hay que aplicarle el
      *               descuento .
-     * @param otro   El descuento con el cual se har ́a la comparaci ́on.
+     * @param otro   El descuento con el cual se hara la comparacion.
      * @return true si el objeto invocante posee un mayor descuento
      *         al aplicarese , false en otro caso .
      */
@@ -36,7 +36,7 @@ public interface Descontable {
     /**
      * Indica si es del mismo tipo que otro descuento .
      * 
-     * @param otro El descuento con el cual se har ́a la comparaci ́on.
+     * @param otro El descuento con el cual se hara la comparacion.
      * @return true si son del mismo tipo , false en otro caso
      */
     public boolean esDelMismoTipo(Descuento otro);
@@ -76,7 +76,7 @@ public interface Descontable {
      * Multiplica el valor del descuento por cierto factor y genera
      * un nuevo descuento .
      *
-     * @param factor El factor por el que se multiplicar ́a el valor
+     * @param factor El factor por el que se multiplicara el valor
      *               del descuento .
      * @return Un nuevo descuento generado a partir del objeto
      *         invocante y el factor a multiplicar .
@@ -90,7 +90,7 @@ public interface Descontable {
      * problema con los decimales ).
      *
      * @param precio El precio al que al aplicarle el descuento
-     *               original , o el equivalente , deber ́ıa devolver la
+     *               original , o el equivalente , deberia devolver la
      *               misma cantidad .
      * @return Un nuevo descuento equivalente al invocante , de tipo
      *         opuesto .
@@ -101,7 +101,7 @@ public interface Descontable {
      * Indica si el objeto invocante son del mismo tipo y tienen el
      * mismo valor .
      *
-     * @param otro El descuento con el que se har ́a la comparaci ́on.
+     * @param otro El descuento con el que se hara la comparacion.
      * @return true si son iguales , false en otro caso .
      */
     public boolean esIgual(Descuento otro);
