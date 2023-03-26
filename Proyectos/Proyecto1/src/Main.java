@@ -5,6 +5,8 @@ public class Main {
         Descuento descuento1 = new DescuentoPorcentaje(10.0);
         Descuento descuento2 = new DescuentoMonto(20.0);
         
+        System.out.println("Precio inicial: " + precio);
+
         // Ejemplo de aplicación de descuento por porcentaje
         double precioConDescuento1 = descuento1.aplica(precio);
         System.out.println("Precio con descuento por porcentaje: " + precioConDescuento1);
