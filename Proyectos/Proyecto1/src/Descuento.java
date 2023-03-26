@@ -24,7 +24,11 @@ public abstract class Descuento implements Descontable {
     }
 
     public boolean esMayor(double precio, Descuento otro) {
-        return (this.aplica(precio) > otro.aplica(precio));
+        if ((this.aplica(precio) > otro.aplica(precio)))
+        return false;
+        else{
+            return true;
+        }
     }
 
     public boolean esDelMismoTipo(Descuento otro) {
@@ -52,7 +56,9 @@ public abstract class Descuento implements Descontable {
 
     public Descuento multiplica(double factor) {
         double valorMultiplicado = this.valor * factor;
-        return this.generaDescuento(valorMultiplicado);
+        Descuento descuentoMultiplicado = this.generaDescuento(valorMultiplicado);
+        System.out.println("El resultado de la multiplicación es: " + valorMultiplicado);
+        return descuentoMultiplicado;
     }
 
     public Descuento generaEquivalente(double precio) {
