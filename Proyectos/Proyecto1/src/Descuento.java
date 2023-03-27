@@ -32,8 +32,11 @@ public abstract class Descuento implements Descontable {
     }
 
     public boolean esDelMismoTipo(Descuento otro) {
-        return this.getClass().equals(otro.getClass());
+        return (this.getClass().equals(otro.getClass()) || 
+                otro instanceof DescuentoMonto && this instanceof DescuentoMonto ||
+                otro instanceof DescuentoPorcentaje && this instanceof DescuentoPorcentaje);
     }
+    
 
     public boolean tieneValor() {
         return (this.valor > 0);

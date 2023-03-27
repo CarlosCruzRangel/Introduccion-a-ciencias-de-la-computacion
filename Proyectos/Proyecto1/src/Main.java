@@ -36,6 +36,8 @@ public class Main {
 
         Descuento equivalente = descuento1.generaEquivalente(precio);
         System.out.println("El descuelto equivalente es "+ equivalente);
+
+        System.out.println("Es del mismo tipo: " + descuento1.esDelMismoTipo(descuento2));
     }
 }
 
