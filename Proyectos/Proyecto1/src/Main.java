@@ -35,7 +35,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese valor del descuento,(%): ");
+                    System.out.print("\033[32m" + "Ingrese valor del descuento,(%): "+"\033[0m");
                     valor = scanner.nextDouble();
                     porcentaje = new DescuentoPorcentaje(valor);
                     System.out.println("Precio con descuento de porcentaje: " + porcentaje.aplica(precio));
@@ -49,12 +49,18 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("¿Es mayor el descuento de porcentaje al de monto? " + porcentaje.esMayor(precio, monto));
-                    System.out.println("¿Es mayor el descuento de monto al de porcentaje? " + monto.esMayor(precio, porcentaje));
+                    if(porcentaje.esMayor(precio, monto) == monto.esMayor(precio, porcentaje)){
+                        
+                        System.out.println("\n"+"\033[31m" + "Tienen el mismo valor" + "\033[0m");
+                    }else{
+                        
+                        System.out.println("\n"+"\033[31m" + "¿Es mayor el descuento de porcentaje al de monto? " + porcentaje.esMayor(precio, monto) + "\033[0m");
+                        System.out.println("\n"+"\033[31m" + "¿Es mayor el descuento de monto al de porcentaje? " + monto.esMayor(precio, porcentaje) + "\033[0m");
+                    }
                     break;
                 case 4:
                 
-                    System.out.println("¿Son del mismo tipo los dos descuentos? " + porcentaje.esDelMismoTipo(monto));
+                    System.out.println("\n"+"\033[31m" + "¿Son del mismo tipo los dos descuentos? " + porcentaje.esDelMismoTipo(monto) + "\033[0m");
                     break;
 
                 case 5:
