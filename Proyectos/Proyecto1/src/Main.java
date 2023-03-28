@@ -110,6 +110,7 @@ public class Main {
                 case 11:
                     System.out.println("¿Cual es el precio del articulo?");
                     precio = scanner.nextDouble();
+                    break;
                 case 12:
                     System.out.println("fin del programa");
                     break;
