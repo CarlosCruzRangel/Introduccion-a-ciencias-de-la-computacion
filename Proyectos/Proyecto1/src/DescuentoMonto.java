@@ -5,7 +5,12 @@ public class DescuentoMonto extends Descuento {
     }
 
     public double aplica(double precio) {
-        return precio - this.valor;
+        if((precio - this.valor)<0){
+            return 0;
+        }else{
+
+            return precio - this.valor;
+        }
     }
 
     protected Descuento generaDescuento(double valor) {

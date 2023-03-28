@@ -35,17 +35,17 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.print("\033[32m" + "Ingrese valor del descuento,(%): "+"\033[0m");
+                    System.out.print("\n"+"\033[32m" + "Ingrese valor del descuento,(%): "+"\033[0m");
                     valor = scanner.nextDouble();
                     porcentaje = new DescuentoPorcentaje(valor);
-                    System.out.println("Precio con descuento de porcentaje: " + porcentaje.aplica(precio));
+                    System.out.println("\n"+"\033[31m" + "Precio con descuento de porcentaje: " + porcentaje.aplica(precio) + "\033[0m");
                     break;
 
                 case 2:
-                    System.out.print("Ingrese valor del descuento (monto): ");
+                    System.out.print("\n"+"\033[32m" + "Ingrese valor del descuento (monto): "+"\033[0m");
                     valor = scanner.nextDouble();
                     monto = new DescuentoMonto(valor);
-                    System.out.println("Precio con descuento de monto: " + monto.aplica(precio));
+                    System.out.println("\n"+"\033[31m" + "Precio con descuento de monto: " + monto.aplica(precio) + "\033[0m");
                     break;
 
                 case 3:
