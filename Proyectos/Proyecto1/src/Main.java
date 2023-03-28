@@ -16,7 +16,7 @@ public class Main {
         
         System.out.println("¿Cual es el precio del articulo?");
         double precio = scanner.nextDouble();
-        while (opcion != 11) {
+        while (opcion != 12) {
 
             System.out.println("\n \n Oprime la opcion de la operacion que deseas realizar");
             System.out.println("1. Aplicar descuento de porcentaje");
@@ -29,7 +29,8 @@ public class Main {
             System.out.println("8. Multiplicar descuento de porcentaje por un factor");            
             System.out.println("9. Multiplicar descuento de monto por un factor");
             System.out.println("10. Generar descuento equivalente");
-            System.out.println("11. Salir");
+            System.out.println("11. Cambiar precio del articulo");
+            System.out.println("12. Salir");
             System.out.print("Ingrese opción: ");
             opcion = scanner.nextInt();
 
@@ -107,6 +108,9 @@ public class Main {
                     break;
 
                 case 11:
+                    System.out.println("¿Cual es el precio del articulo?");
+                    precio = scanner.nextDouble();
+                case 12:
                     System.out.println("fin del programa");
                     break;
 
