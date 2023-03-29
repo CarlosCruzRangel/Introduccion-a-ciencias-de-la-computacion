@@ -20,12 +20,20 @@ public class Main {
         // Declaring a variable called valor and assigning it a value of 10.0 for
         // factor.
         double valor = 0.0;
+        double acumuladorPorcentaje1 = 0.0;
+        double acumuladorPorcentaje2 = 0.0;
+        double acumuladorMonto1 = 0.0;
+        double acumuladorMonto2 = 0.0;
 
         // Creating new objects of the class DescuentoPorcentaje and DescuentoMonto.
         Descuento porcentaje = new DescuentoPorcentaje(valor);
         Descuento monto = new DescuentoMonto(valor);
-        Descuento porcentajeAcu = new DescuentoPorcentaje(valor);
-        Descuento montoAcu = new DescuentoMonto(valor);
+
+
+        Descuento porcentajeAcu1 = new DescuentoPorcentaje(valor);
+        Descuento porcentajeAcu2 = new DescuentoPorcentaje(valor);
+        Descuento montoAcu1 = new DescuentoMonto(valor);
+        Descuento montoAcu2 = new DescuentoMonto(valor);
 
         System.out.println("\n \n Hola:");
 
@@ -33,21 +41,23 @@ public class Main {
         System.out.print("¿Cual es el precio del articulo? ");
         double precio = scanner.nextDouble();
 
-        while (opcion != 12) {
+        while (opcion != 14) {
 
             System.out.println("\n \n Oprime la opcion de la operacion que deseas realizar");
-            System.out.println("1. Aplicar descuento de porcentaje");
-            System.out.println("2. Aplicar descuento de monto");
-            System.out.println("3. Comparar descuentos");
-            System.out.println("4. Comprobar si son del mismo tipo");
-            System.out.println("5. Comprobar si tienen valor");
-            System.out.println("6. Combinar descuentos");
-            System.out.println("7. Acumular descuentos");
-            System.out.println("8. Multiplicar descuento de porcentaje por un factor");
-            System.out.println("9. Multiplicar descuento de monto por un factor");
-            System.out.println("10. Generar descuento equivalente");
-            System.out.println("11. Cambiar precio del articulo");
-            System.out.println("12. Salir");
+            System.out.println(" 1. Aplicar descuento de porcentaje");
+            System.out.println(" 2. Aplicar descuento de monto");
+            System.out.println(" 3. Comparar descuentos");
+            System.out.println(" 4. Comprobar si son del mismo tipo");
+            System.out.println(" 5. Comprobar si tienen valor");
+            System.out.println(" 6. Combinar descuentos de diferente tipo");
+            System.out.println(" 7. Combina dos descuentos de porcentaje");
+            System.out.println(" 8. Combina dos descuentos de monto");
+            System.out.println(" 9. Acumular monto y porcentaje");
+            System.out.println("10. Multiplicar descuento de porcentaje por un factor");
+            System.out.println("11. Multiplicar descuento de monto por un factor");
+            System.out.println("12. Generar descuento equivalente");
+            System.out.println("13. Cambiar precio del articulo");
+            System.out.println("14. Salir");
             System.out.print("Ingrese opción: ");
             opcion = scanner.nextInt();
 
@@ -133,19 +143,60 @@ public class Main {
                     System.out.println("\n" + "\033[31m" + "Descuento combinado: " + combinado.muestra() + "\033[0m");
                     break;
 
-                // Printing the price of the product with the discount applied.
+                
+                // Creating a new object of the class DescuentoPorcentaje and then it is calling the method
+                // combina() and aplica() on the object.
                 case 7:
-                    System.out.println("\n" + "\033[31m" + "Precio con ambos descuentos acumulados: "
-                            + porcentaje.acumula(precio, monto) + "\033[0m");
+                    System.out.print("\n" + "\033[32m" + "Ingresa el primer porcentaje para combinar: " + "\033[0m");
+                    acumuladorPorcentaje1 = inPrecio.nextDouble();
+                    System.out.print("\n" + "\033[32m" + "Ingresa el segundo porcentaje para combinar: " + "\033[0m");
+                    acumuladorPorcentaje2 = inPrecio.nextDouble();
+
+                    porcentajeAcu1 = new DescuentoPorcentaje(acumuladorPorcentaje1);
+                    porcentajeAcu2 = new DescuentoPorcentaje(acumuladorPorcentaje2);
+
+                    porcentaje = porcentajeAcu1.combina(porcentajeAcu2);
+                    System.out.println(
+                            "\n" + "\033[31m" + "El porcentaje combinado es " + porcentaje.muestra() + "\033[0m");
+                    System.out.println("\n" + "\033[31m" + "El nuevo precio con descuento de porcentaje combinado: "
+                            + porcentaje.aplica(precio) + "\033[0m");
                     break;
 
+                
+                // Creating a new object of the class DescuentoMonto and then it is calling the method
+                // combina() and aplica() on the object.
+                case 8:
+                    System.out.print("\n" + "\033[32m" + "Ingresa el primer monto para combinar: " + "\033[0m");
+                    acumuladorMonto1 = inPrecio.nextDouble();
+                    System.out.print("\n" + "\033[32m" + "Ingresa el segundo monto para combinar: " + "\033[0m");
+                    acumuladorMonto2 = inPrecio.nextDouble();
+
+                    montoAcu1 = new DescuentoMonto(acumuladorMonto1);
+                    montoAcu2 = new DescuentoMonto(acumuladorMonto2);
+
+                    monto = montoAcu1.combina(montoAcu2);
+                    System.out.println("\n" + "\033[31m" + "El monto combinado es " + monto.muestra() + "\033[0m");
+                    System.out.println("\n" + "\033[31m" + "El nuevo precio con descuento de monto combinado: "
+                            + monto.aplica(precio) + "\033[0m");
+                    break;
+
+                // Printing out the price of the item with the discount applied.
+                case 9:
+                    System.out.println(
+                            "\n" + "\033[32m" + "Descuento por porcentaje: " + porcentaje.muestra() + "\033[0m");
+                    System.out.println("\n" + "\033[32m" + "Descuento por monto: " + monto.muestra() + "\033[0m");
+
+                    System.out.println("\n" + "\033[31m" + "Precio con ambos descuentos acumulados: "
+                            + porcentaje.acumula(precio, monto) + "\033[0m");
+
+                    break;
                 /*
                  * Asking the user to input a value for the discount. Then it is creating a new
                  * object
                  * of the class DescuentoPorcentaje and assigning it to the variable porcentaje.
                  * Finally, it is printing the price of the product with the discount applied.
                  */
-                case 8:
+                case 10:
                     System.out.print(
                             "\n" + "\033[32m" + "Ingrese factor para multiplicar el descuento (%): " + "\033[0m");
                     valor = scanner.nextDouble();
@@ -165,7 +216,7 @@ public class Main {
                  * of the class DescuentoPorcentaje and assigning it to the variable porcentaje.
                  * Finally, it is printing the price of the product with the discount applied.
                  */
-                case 9:
+                case 11:
                     System.out.print(
                             "\n" + "\033[32m" + "Ingrese factor para multiplicar el descuento de monto: " + "\033[0m");
                     valor = scanner.nextDouble();
@@ -186,16 +237,19 @@ public class Main {
                  * of the class DescuentoPorcentaje and assigning it to the variable porcentaje.
                  * Finally, it is printing the price of the product with the discount applied.
                  */
-                case 10:
-                    System.out.println("\n" + "\033[32m" + "Descuento por porcentaje: " + porcentaje.muestra() + "\033[0m");
+                case 12:
+                    System.out.println(
+                            "\n" + "\033[32m" + "Descuento por porcentaje: " + porcentaje.muestra() + "\033[0m");
                     Descuento equivalenteMonto = porcentaje.generaEquivalente(precio);
-                    System.out.println("\n" + "\033[31m" + "Descuento porcentaje equivalente en monto: " + equivalenteMonto.muestra() + "\033[0m");
-                    
+                    System.out.println("\n" + "\033[31m" + "Descuento porcentaje equivalente en monto: "
+                            + equivalenteMonto.muestra() + "\033[0m");
+
                     System.out.println("\n");
-                
+
                     System.out.println("\n" + "\033[32m" + "Descuento por monto: " + monto.muestra() + "\033[0m");
                     Descuento equivalentePorcentaje = monto.generaEquivalente(precio);
-                    System.out.println("\n" + "\033[31m" + "Descuento monto equivalente en porcentaje: " + equivalentePorcentaje.muestra() + "\033[0m");
+                    System.out.println("\n" + "\033[31m" + "Descuento monto equivalente en porcentaje: "
+                            + equivalentePorcentaje.muestra() + "\033[0m");
                     break;
 
                 /*
@@ -205,14 +259,14 @@ public class Main {
                  * the
                  * switch statement.
                  */
-                case 11:
+                case 13:
                     System.out.print("\n" + "\033[32m" + "¿Cual es el precio del articulo?" + "\033[0m");
                     precio = scanner.nextDouble();
                     break;
 
                 // Printing the message "fin del programa" and breaking out of the switch
                 // statement.
-                case 12:
+                case 14:
                     System.out.println("\n" + "\033[31m" + "fin del programa" + "\033[0m");
                     break;
 
