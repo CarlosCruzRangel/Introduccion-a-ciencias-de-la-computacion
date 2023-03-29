@@ -1,4 +1,4 @@
-/** 
+/**
  * Los servicios que debe ofrecer un Descuento que puede ser
  * de tipo porcentaje o de monto se listan en esta interfaz .
  * 
@@ -7,7 +7,7 @@
  * 
  * @since Marzo 25 del 2023, UNAM.
  * @version v1.0
-*/
+ */
 
 public interface Descontable {
 
@@ -113,5 +113,5 @@ public interface Descontable {
      * @return La cadena correspondiente al descuento .
      */
     public String muestra();
-    
+
 }
