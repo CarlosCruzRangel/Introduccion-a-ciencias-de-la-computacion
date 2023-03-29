@@ -5,6 +5,12 @@ import java.util.Scanner;
  * product, compare discounts, combine discounts, accumulate discounts,
  * multiply discounts, generate equivalent, discounts, and change the price
  * of the product
+ * 
+ * @author Carlos Cruz Rangel
+ * @author Toprak Memik Hernandez
+ * 
+ * @since Marzo 29 del 2023, UNAM.
+ * @version v1.0
  */
 
 public class Main {
@@ -260,7 +266,7 @@ public class Main {
                  * switch statement.
                  */
                 case 13:
-                    System.out.print("\n" + "\033[32m" + "¿Cual es el precio del articulo?" + "\033[0m");
+                    System.out.print("\n" + "\033[32m" + "¿Cual es el precio del articulo? " + "\033[0m");
                     precio = scanner.nextDouble();
                     break;
 
