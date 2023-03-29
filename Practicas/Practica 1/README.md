@@ -5,7 +5,7 @@
 
 
 <!-- PROJECT SHIELDS -->
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Status badge](https://img.shields.io/badge/status-en%20progreso-yellow?style=for-the-badge)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) ![Status badge](https://img.shields.io/badge/status-Terminado%20-green?style=for-the-badge)
 
 
 
