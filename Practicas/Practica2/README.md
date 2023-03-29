@@ -178,7 +178,7 @@ Ahora, crea una clase clase ejecutable:
 
 * Por cada caso de prueba, se le desplegara un menu al usuario en el cual sera libre de generar una contraseña por el sistema o por el mismo, si es generada por el mismo deberemos indicarle si su contraseña es valida o no, si la contraseña es debil se le dajara escribir tantas veces sea necesario hasta que su contraseña sea fuerte.
 
-Crea otro array de booleanos donde se almacene si el password del array de Password es o no fuerte (usa el bucle anterior). Al final, muestra la contraseña y si es o no fuerte (usa el bucle anterior). Usa este simple formato: contraseña1 valorbooleano1
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +209,7 @@ Practica2
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+_________________________________________________
 <!-- GETTING STARTED -->
 # Como Comenzar
 
