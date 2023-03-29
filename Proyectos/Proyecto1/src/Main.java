@@ -12,9 +12,9 @@ public class Main {
         Descuento porcentajeAcu = new DescuentoPorcentaje(valor);
         Descuento montoAcu = new DescuentoMonto(valor);
         
-        System.out.println("\n \n Menú:");
+        System.out.println("\n \n Hola:");
         
-        System.out.println("¿Cual es el precio del articulo?");
+        System.out.print("¿Cual es el precio del articulo? ");
         double precio = scanner.nextDouble();
         while (opcion != 12) {
 
@@ -108,7 +108,7 @@ public class Main {
                     break;
 
                 case 11:
-                    System.out.println("¿Cual es el precio del articulo?");
+                    System.out.print("¿Cual es el precio del articulo?");
                     precio = scanner.nextDouble();
                     break;
                 case 12:
