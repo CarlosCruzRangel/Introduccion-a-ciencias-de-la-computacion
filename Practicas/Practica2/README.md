@@ -16,7 +16,7 @@
     <img src="https://user-images.githubusercontent.com/79823316/220245622-4cd1cc0b-521c-4252-8e39-1d2b0d9c2389.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">PRÁCTICA 1: Variables, Tipos de datos primitivos, Controladores de Flujo y Scanner</h3>
+  <h3 align="center">PRÁCTICA 2: Variables, Tipos de datos primitivos, Controladores de Flujo y Scanner</h3>
 
   
   </p>
