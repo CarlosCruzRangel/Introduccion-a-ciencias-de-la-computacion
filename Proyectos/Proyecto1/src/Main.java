@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 /**
  * The class `Main` is a program that allows the user to apply discounts to a
- * product, compare discounts, combine discounts, accumulate discounts, 
- * multiply discounts, generate equivalent, discounts, and change the price 
+ * product, compare discounts, combine discounts, accumulate discounts,
+ * multiply discounts, generate equivalent, discounts, and change the price
  * of the product
  */
 
@@ -187,10 +187,13 @@ public class Main {
                  * Finally, it is printing the price of the product with the discount applied.
                  */
                 case 10:
-                    System.out.print("Ingrese precio para generar descuento equivalente: ");
-                    double precioEquivalente = scanner.nextDouble();
-                    Descuento equivalente = porcentaje.generaEquivalente(precioEquivalente);
-                    System.out.println("El descuento equivalente es: " + equivalente.muestra());
+                    System.out.println("Descuento por porcentaje: " + porcentaje.muestra());
+                    Descuento equivalenteMonto = porcentaje.generaEquivalente(precio);
+                    System.out.println("Descuento porcentaje equivalente en monto: " + equivalenteMonto.muestra());
+                
+                    System.out.println("Descuento por monto: " + monto.muestra());
+                    Descuento equivalentePorcentaje = monto.generaEquivalente(precio);
+                    System.out.println("Descuento monto equivalente en porcentaje: " + equivalentePorcentaje.muestra());
                     break;
 
                 /*

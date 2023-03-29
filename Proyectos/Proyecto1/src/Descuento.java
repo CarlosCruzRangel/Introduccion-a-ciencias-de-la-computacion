@@ -126,9 +126,15 @@ public abstract class Descuento implements Descontable {
      * @return A new Descuento object is being returned.
      */
     public Descuento generaEquivalente(double precio) {
-        double valorEquivalente = precio / (1 - (this.valor / 100));
-        return this.generaDescuento(valorEquivalente - precio);
+        if (this instanceof DescuentoPorcentaje) {
+            double valorMonto = precio * (this.valor / 100);
+            return new DescuentoMonto(valorMonto);
+        } else {
+            double valorPorcentaje = (this.valor / precio) * 100;
+        return new DescuentoPorcentaje(valorPorcentaje);
+        }
     }
+    
 
     /**
      * If the other discount is of the same type and has the same value, then return
@@ -148,7 +154,7 @@ public abstract class Descuento implements Descontable {
      * @return The class name and the value of the variable valor.
      */
     public String muestra() {
-        return this.getClass().getSimpleName() + " " + this.valor;
+        return String.valueOf(this.valor);
     }
 
     /**
