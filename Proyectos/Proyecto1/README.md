@@ -45,6 +45,8 @@ Los descuentos creados son realistas, esto esignifica que los porcentajes siempr
 
 Esta practica fue hecha VSCode usando como lenguaje de programación a java.
 
+
+
 * ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2_For_Windows-blue?style=for-the-badge&logo=visualstudiocode)
 
 * ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2--1678_For_Linux-blue?style=for-the-badge&logo=visualstudiocode)
@@ -52,6 +54,19 @@ Esta practica fue hecha VSCode usando como lenguaje de programación a java.
 * ![Java](https://img.shields.io/badge/java-11-orange?style=for-the-badge&logo=java) 
 
 
+## Árbol de carpetas y archivos
+```
+Proyecto1
+├──────────Folder "src"
+│            ├───Descontable.java
+│            ├───Descuentos.java
+│            ├───DescuentoMonto.java
+│            ├───DescuentoPorcentaje
+│            ├───Main.java
+│            ├───runLinux.sh
+│            └───runWindows.bat
+└───Readme.md
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
