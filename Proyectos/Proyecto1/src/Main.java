@@ -2,10 +2,9 @@ import java.util.Scanner;
 
 /**
  * The class `Main` is a program that allows the user to apply discounts to a
- * product, compare
- * discounts, combine discounts, accumulate discounts, multiply discounts,
- * generate equivalent
- * discounts, and change the price of the product
+ * product, compare discounts, combine discounts, accumulate discounts, 
+ * multiply discounts, generate equivalent, discounts, and change the price 
+ * of the product
  */
 
 public class Main {
