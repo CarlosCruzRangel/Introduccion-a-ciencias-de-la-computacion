@@ -21,7 +21,6 @@ echo "EMPIEZA LA COMPILACION DEL PROYECTO 1"
 echo
 echo "...Compilando..."
 echo
-    cd src
 
     javac *.java
 
@@ -33,41 +32,5 @@ read -n 1 -s -r -p "Presione cualquier tecla para continuar..."
 echo
 \
 echo "EMPIEZA LA EJECUCION DEL PROYECTO 1"
-    # Función para mostrar el menú
-mostrar_menu() {
-    echo
-    echo "Seleccione una opción:"
-    echo "1. Actividad 1 "
-    echo "2. Actividad 2 "
-    echo "3. Actividad 3 "
-    echo "4. Actividad 4 "
-    echo "5. Actividad 5 "
-    echo "6. Salir "
-}
+ java Main
 
-# Ciclo para mostrar el menú y recibir la entrada del usuario
-opcion=0
-while [ $opcion -ne 6 ]
-do
-    mostrar_menu
-    read opcion
-    case $opcion in
-        1) java Actividad1 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        2) java Actividad2 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        3) java Actividad3 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        4) java Actividad4 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        5) java Actividad5 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        6) "Adios buapo" ;;
-        *) "Opcion Invalida" ;;
-        
-    esac
-    if ! [[ "$opcion" =~ ^[1-6]+$ ]]; then
-        echo "Entrada no válida, por favor ingrese sólo caracteres numéricos del 1 al 6."
-        opcion=0
-    fi
-done
