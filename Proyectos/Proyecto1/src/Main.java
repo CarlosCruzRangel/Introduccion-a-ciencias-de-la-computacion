@@ -65,39 +65,39 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("¿Tiene valor el descuento de porcentaje? " + porcentaje.tieneValor());
-                    System.out.println("¿Tiene valor el descuento de monto? " + monto.tieneValor());
+                    System.out.println("\n"+"\033[31m" + "¿Tiene valor el descuento de porcentaje? " + porcentaje.tieneValor() + "\033[0m");
+                    System.out.println("\n"+"\033[31m" + "¿Tiene valor el descuento de monto? " + monto.tieneValor() + "\033[0m");
                     break;
 
                 case 6:
                     Descuento combinado = porcentaje.combina(monto);
-                    System.out.println("Descuento combinado: " + combinado.muestra());
+                    System.out.println("\n"+"\033[31m" + "Descuento combinado: " + combinado.muestra() + "\033[0m");
                     break;
 
                 case 7:
-                    System.out.println("Precio con ambos descuentos acumulados: " + porcentaje.acumula(precio, monto));
+                    System.out.println("\n"+"\033[31m" + "Precio con ambos descuentos acumulados: " + porcentaje.acumula(precio, monto) + "\033[0m");
                     break;
 
                 case 8:
-                    System.out.print("Ingrese factor para multiplicar el descuento (%): ");
+                    System.out.print("\n"+"\033[32m" + "Ingrese factor para multiplicar el descuento (%): " + "\033[0m");
                     valor = scanner.nextDouble();
                     Descuento porcentajeMultiplicado = porcentaje.multiplica(valor);
-                    System.out.println("Descuento de porcentaje multiplicado: " + porcentajeMultiplicado.muestra());
+                    System.out.println("\n"+"\033[31m" + "Descuento de porcentaje multiplicado: " + porcentajeMultiplicado.muestra() + "\033[0m");
                     
                     double nuevoPrecioPorcentaje= porcentajeMultiplicado.aplica(precio);
-                    System.out.println("Nuevo precio con el pocentaje y factor aplicado: " + nuevoPrecioPorcentaje);
+                    System.out.println("\n"+"\033[31m" + "Nuevo precio con el pocentaje y factor aplicado: " + nuevoPrecioPorcentaje + "\033[0m");
                     
 
                     break;
                 case 9:
-                    System.out.print("Ingrese factor para multiplicar el descuento de monto: ");
+                    System.out.print("\n"+"\033[32m" + "Ingrese factor para multiplicar el descuento de monto: " + "\033[0m");
                     valor = scanner.nextDouble();
                     
                     Descuento montoMultiplicado= monto.multiplica(valor);
-                    System.out.println("Descuento de monto multiplicado: " + montoMultiplicado.muestra());
+                    System.out.println("\n"+"\033[31m" + "Descuento de monto multiplicado: " + montoMultiplicado.muestra() + "\033[0m");
                     
                     double nuevoPrecioMonto= montoMultiplicado.aplica(precio);
-                    System.out.println("Nuevo precio con el monto y factor aplicado: " + nuevoPrecioMonto);
+                    System.out.println("\n"+"\033[31m" + "Nuevo precio con el monto y factor aplicado: " + nuevoPrecioMonto + "\033[0m");
 
                     break;
                 case 10:
@@ -108,15 +108,15 @@ public class Main {
                     break;
 
                 case 11:
-                    System.out.print("¿Cual es el precio del articulo?");
+                    System.out.print("\n"+"\033[32m" + "¿Cual es el precio del articulo?" + "\033[0m");
                     precio = scanner.nextDouble();
                     break;
                 case 12:
-                    System.out.println("fin del programa");
+                    System.out.println("\n"+"\033[31m" + "fin del programa" + "\033[0m");
                     break;
 
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("\n"+"\033[31m" + "Opcion no valida" + "\033[0m");
                     break;
                     
             }
