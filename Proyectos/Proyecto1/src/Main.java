@@ -187,13 +187,15 @@ public class Main {
                  * Finally, it is printing the price of the product with the discount applied.
                  */
                 case 10:
-                    System.out.println("Descuento por porcentaje: " + porcentaje.muestra());
+                    System.out.println("\n" + "\033[32m" + "Descuento por porcentaje: " + porcentaje.muestra() + "\033[0m");
                     Descuento equivalenteMonto = porcentaje.generaEquivalente(precio);
-                    System.out.println("Descuento porcentaje equivalente en monto: " + equivalenteMonto.muestra());
+                    System.out.println("\n" + "\033[31m" + "Descuento porcentaje equivalente en monto: " + equivalenteMonto.muestra() + "\033[0m");
+                    
+                    System.out.println("\n");
                 
-                    System.out.println("Descuento por monto: " + monto.muestra());
+                    System.out.println("\n" + "\033[32m" + "Descuento por monto: " + monto.muestra() + "\033[0m");
                     Descuento equivalentePorcentaje = monto.generaEquivalente(precio);
-                    System.out.println("Descuento monto equivalente en porcentaje: " + equivalentePorcentaje.muestra());
+                    System.out.println("\n" + "\033[31m" + "Descuento monto equivalente en porcentaje: " + equivalentePorcentaje.muestra() + "\033[0m");
                     break;
 
                 /*
