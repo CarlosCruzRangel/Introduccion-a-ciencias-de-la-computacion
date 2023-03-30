@@ -48,7 +48,8 @@ Carro carroCaiden = new Carro();
 ```
 
 >RESPUESTA:
-En este ...
+>La sentencia "new Carro()" crea una nueva instancia de la clase "Carro" en la memoria y devuelve una referencia a la nueva instancia. La variable "carroCaiden" se declara y se le asigna la referencia de la nueva instancia de "Carro". La variable "carroCaiden" es de tipo "Carro" y se puede utilizar para acceder a los métodos y propiedades de la instancia de la clase "Carro". El constructor de la clase "Carro" se llama automáticamente para inicializar la nueva instancia. Si no se define ningún constructor explícito, la clase tendrá un constructor predeterminado sin argumentos. Se asignan los valores predeterminados a las variables de instancia "marca" y "anio". En este caso, como no se especifican valores para las variables de instancia, "marca" será inicializada con el valor predeterminado "null" (para objetos de tipo String como es el caso de "marca") y "anio" con el valor predeterminado "0" (para objetos de tipo int como es el caso de "anio").
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Actividad 2
