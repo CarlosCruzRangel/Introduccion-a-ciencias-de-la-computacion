@@ -33,7 +33,7 @@ public class Persona {
         sc.nextLine(); // Consumir el salto de línea
 
         // Crea la segunda persona con los datos introducidos
-        Persona persona2 = new Persona(nombre2, edad2);
+        Persona persona2 = new Persona();
 
         // Crea la tercera persona con los datos por defecto
         Persona persona3 = new Persona();
@@ -91,37 +91,6 @@ public class Persona {
         generarDNI();
     }
 
-    private char comprobarSexo(char sexo) {
-        return sexo == 'H' || sexo == 'M' ? sexo : sexo_por_defecto;
-    }
-
-    private int calcularIMC() {
-        double imc = peso / Math.pow(altura, 2);
-        if (imc < 20) {
-            return peso_ideal_bajo;
-        } else if (imc >= 20 && imc <= 25) {
-            return peso_ideal_normal;
-        } else {
-            return peso_ideal_alto;
-        }
-    }
-
-    public boolean esMayorDeEdad() {
-        return edad >= 18;
-    }
-
-    private void generarDNI() {
-        final int NUMERO_DNI = 100000000;
-        Random rand = new Random();
-        int numeroDNI = rand.nextInt(NUMERO_DNI);
-        dni = String.valueOf(numeroDNI) + "-" + Character.toString((char) (numeroDNI % 23 + 65));
-    }
-
-    public String toString() {
-        return "Nombre: " + nombre + "\nEdad: " + edad + "\nDNI: " + dni + "\nSexo: " + sexo + "\nPeso: " + peso
-                + "\nAltura: " + altura;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -164,6 +133,36 @@ public class Persona {
 
     public double getAltura() {
         return altura;
+    }
+    private char comprobarSexo(char sexo) {
+        return sexo == 'H' || sexo == 'M' ? sexo : sexo_por_defecto;
+    }
+
+    private int calcularIMC() {
+        double imc = peso / Math.pow(altura, 2);
+        if (imc < 20) {
+            return peso_ideal_bajo;
+        } else if (imc >= 20 && imc <= 25) {
+            return peso_ideal_normal;
+        } else {
+            return peso_ideal_alto;
+        }
+    }
+
+    public boolean esMayorDeEdad() {
+        return edad >= 18;
+    }
+
+    private void generarDNI() {
+        final int NUMERO_DNI = 100000000;
+        Random rand = new Random();
+        int numeroDNI = rand.nextInt(NUMERO_DNI);
+        dni = String.valueOf(numeroDNI) + "-" + Character.toString((char) (numeroDNI % 23 + 65));
+    }
+
+    public String toString() {
+        return "Nombre: " + nombre + "\nEdad: " + edad + "\nDNI: " + dni + "\nSexo: " + sexo + "\nPeso: " + peso
+                + "\nAltura: " + altura;
     }
 
     public void mostrarMensajePeso() {
