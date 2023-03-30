@@ -35,17 +35,16 @@ echo "EMPIEZA LA EJECUCION DE LA PRACTICA1"
 mostrar_menu() {
     echo
     echo "Seleccione una opción:"
-    echo "1. Actividad 1 "
-    echo "2. Actividad 2 "
-    echo "3. Actividad 3 "
-    echo "4. Actividad 4 "
-    echo "5. Actividad 5 "
-    echo "6. Salir "
+    echo "1. Actividad 2 "
+    echo "2. Actividad 3 "
+    echo "3. Actividad 4 "
+    echo "4. Actividad 5 "
+    echo "5. Salir "
 }
 
 # Ciclo para mostrar el menú y recibir la entrada del usuario
 opcion=0
-while [ $opcion -ne 6 ]
+while [ $opcion -ne 5 ]
 do
     mostrar_menu
     read opcion
