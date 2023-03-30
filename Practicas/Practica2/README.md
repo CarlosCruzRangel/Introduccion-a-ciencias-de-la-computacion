@@ -185,7 +185,7 @@ Ahora, crea una clase clase ejecutable:
 
 ## Hecho con:
 
-Esta practica fue hecha VSCode usando como lenguaje de programación a java.
+Esta práctica fue hecha VSCode usando como lenguaje a java.
 
 
 * ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-v1.76.2_For_Windows-blue?style=for-the-badge&logo=visualstudiocode)
