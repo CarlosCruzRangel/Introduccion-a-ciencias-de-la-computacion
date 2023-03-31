@@ -13,29 +13,49 @@ public class Raices {
     private double b;
     private double c;
 
-    // Constructor que recibe los tres coeficientes de la ecuación
+    
+    // A constructor that receives the three coefficients of the equation.
     public Raices(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    // Método para obtener el discriminante
+    
+    /**
+     * This function returns the discriminant of a quadratic equation
+     * 
+     * @return The discriminant of the quadratic equation.
+     */
     public double getDiscriminante() {
         return Math.pow(b, 2) - 4 * a * c;
     }
 
-    // Método para saber si la ecuación tiene dos raíces
+    
+    /**
+     * > This function returns true if the discriminant is greater than or equal to zero, and false
+     * otherwise
+     * 
+     * @return The method is returning a boolean value.
+     */
     public boolean tieneRaices() {
         return getDiscriminante() >= 0;
     }
 
-    // Método para saber si la ecuación tiene una única raíz
+    
+    /**
+     * It returns true if the discriminant is equal to 0.
+     * 
+     * @return The method is returning a boolean value.
+     */
     public boolean tieneRaiz() {
         return getDiscriminante() == 0;
     }
 
-    // Método para obtener las raíces de la ecuación
+    
+    /**
+     * This function checks if the equation has real roots, and if it does, it prints them
+     */
     public void obtenerRaices() {
         if (tieneRaices()) {
             double x1 = (-b + Math.sqrt(getDiscriminante())) / (2 * a);
@@ -46,7 +66,11 @@ public class Raices {
         }
     }
 
-    // Método que muestra por consola las posibles soluciones de la ecuación
+    
+    /**
+     * If the equation has roots, it gets them. If it has a root, it gets it. If it doesn't have a
+     * root, it says so
+     */
     public void calcular() {
         if (tieneRaices()) {
             obtenerRaices();
