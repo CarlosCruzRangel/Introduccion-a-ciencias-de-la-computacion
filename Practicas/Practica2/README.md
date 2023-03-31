@@ -154,7 +154,7 @@ Tendremos los 3 coeficientes como atributos, llamémosles a, b y c. Hay que inse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Actividad 5
+## Actividad 5 (Clase: Password.java)
 
 Haz una clase llamada Password que siga las siguientes condiciones:
 
@@ -170,8 +170,8 @@ Los métodos que implementa serán:
 * esFuerte(): devuelve un booleano si es fuerte o no, para que sea fuerte debe tener mas de 2 mayúsculas, mas de 1 minúscula y mas de 5 números.
 
 * generarPassword(): genera la contraseña del objeto con la longitud que tenga.
-* Método get para contrase ̃na y longitud.
-* Método set para contrase ̃na.
+* Método get para contraseña y longitud.
+* Método set para contraseña.
 
 Ahora, crea una clase clase ejecutable:
 
