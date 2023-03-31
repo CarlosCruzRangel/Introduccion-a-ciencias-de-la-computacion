@@ -2,6 +2,17 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Persona is a class that represents a person, with a name, age, DNI, sex,
+ * weight and height
+ * 
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprac Memik Hernandez
+ * 
+ * @since 1 abril 2023, UNAM
+ * @version v1.0
+ */
+
 public class Persona {
 
     public static void main(String[] args) {
@@ -91,7 +102,8 @@ public class Persona {
 
                     // Controlar que el usuario introduzca un número válido
                     int edad2 = 0;
-                    try {edad2 = sc.nextInt();
+                    try {
+                        edad2 = sc.nextInt();
                         sc.nextLine(); // Consumir el salto de línea
                     } catch (InputMismatchException e) {
                         System.out.println("ERROR: Debes introducir un número");
@@ -102,7 +114,7 @@ public class Persona {
                     char sexo2 = sc.nextLine().charAt(0);
                     System.out.print("Peso: ");
                     double peso2 = 0;
-    
+
                     // Controlar que el usuario introduzca un número válido
                     try {
                         peso2 = sc.nextDouble();
@@ -112,10 +124,10 @@ public class Persona {
                         sc.nextLine(); // Consumir la entrada errónea
                         continue; // Volver a mostrar el menú
                     }
-    
+
                     System.out.print("Altura: ");
                     double altura2 = 0;
-    
+
                     // Controlar que el usuario introduzca un número válido
                     try {
                         altura2 = sc.nextDouble();
@@ -125,31 +137,29 @@ public class Persona {
                         sc.nextLine(); // Consumir la entrada errónea
                         continue; // Volver a mostrar el menú
                     }
-    
+
                     // Crea la segunda persona con los datos introducidos
                     persona2 = new Persona(nombre2, edad2, sexo2, peso2, altura2);
                     System.out.println("Datos de la segunda persona introducidos correctamente");
                     break;
-    
+
                 case 3:
                     // Muestra los resultados de ambas personas
                     System.out.println("RESULTADOS:");
                     System.out.println("Persona 1: " + persona1);
                     System.out.println("Persona 2: " + persona2);
                     break;
-    
+
                 case 4:
                     System.out.println("Saliendo del programa...");
                     break;
-    
+
                 default:
                     System.out.println("Opción inválida, vuelve a intentarlo");
                     break;
             }
         }
     }
-    
-
 
     private String nombre;
     private int edad;
@@ -225,6 +235,7 @@ public class Persona {
     public double getAltura() {
         return altura;
     }
+
     private char comprobarSexo(char sexo) {
         return sexo == 'H' || sexo == 'M' ? sexo : sexo_por_defecto;
     }

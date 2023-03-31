@@ -1,6 +1,17 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The class Password generates a random password with at least 2 uppercase
+ * letters, 1 lowercase letter, and 5 numbers
+ * 
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprac Memik Hernandez
+ * 
+ * @since 1 abril 2023, UNAM
+ * @version v1.0
+ */
+
 public class Password {
 
     private int longitud;
@@ -53,31 +64,31 @@ public class Password {
         String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
         String numeros = "0123456789";
-    
+
         // Generar al menos 2 mayúsculas
         String password = "";
         for (int i = 0; i < 2; i++) {
             int index = random.nextInt(mayusculas.length());
             password += mayusculas.charAt(index);
         }
-    
+
         // Generar al menos 1 minúscula
         int index = random.nextInt(minusculas.length());
         password += minusculas.charAt(index);
-    
+
         // Generar al menos 5 números
         for (int i = 0; i < 5; i++) {
             index = random.nextInt(numeros.length());
             password += numeros.charAt(index);
         }
-    
+
         // Completar la contraseña con caracteres aleatorios
         while (password.length() < longitud) {
             String caracteres = mayusculas + minusculas + numeros;
             index = random.nextInt(caracteres.length());
             password += caracteres.charAt(index);
         }
-    
+
         this.contrasena = password;
     }
 

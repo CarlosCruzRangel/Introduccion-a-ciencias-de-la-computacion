@@ -1,3 +1,13 @@
+/**
+ * It calculates the roots of a quadratic equation
+ * 
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprac Memik Hernandez 
+ * 
+ * @since 1 abril 2023, UNAM
+ * @version v1.0
+ */
+
 public class Raices {
     private double a;
     private double b;
