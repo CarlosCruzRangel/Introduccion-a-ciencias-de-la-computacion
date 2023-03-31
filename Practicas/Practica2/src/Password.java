@@ -3,6 +3,84 @@ import java.util.Scanner;
 
 public class Password {
 
+    private int longitud;
+    private String contrasena;
+
+    public Password() {
+        this.longitud = 8;
+        generarPassword();
+    }
+
+    public Password(String contrasena) {
+        this.longitud = contrasena.length();
+        this.contrasena = contrasena;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+        this.longitud = contrasena.length();
+    }
+
+    public boolean esFuerte() {
+        int mayusculas = 0;
+        int minusculas = 0;
+        int numeros = 0;
+
+        for (int i = 0; i < longitud; i++) {
+            char c = contrasena.charAt(i);
+            if (Character.isUpperCase(c)) {
+                mayusculas++;
+            } else if (Character.isLowerCase(c)) {
+                minusculas++;
+            } else if (Character.isDigit(c)) {
+                numeros++;
+            }
+        }
+
+        return mayusculas > 2 && minusculas > 1 && numeros > 5;
+    }
+
+    public void generarPassword() {
+        Random random = new Random();
+        String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String minusculas = "abcdefghijklmnopqrstuvwxyz";
+        String numeros = "0123456789";
+    
+        // Generar al menos 2 mayúsculas
+        String password = "";
+        for (int i = 0; i < 2; i++) {
+            int index = random.nextInt(mayusculas.length());
+            password += mayusculas.charAt(index);
+        }
+    
+        // Generar al menos 1 minúscula
+        int index = random.nextInt(minusculas.length());
+        password += minusculas.charAt(index);
+    
+        // Generar al menos 5 números
+        for (int i = 0; i < 5; i++) {
+            index = random.nextInt(numeros.length());
+            password += numeros.charAt(index);
+        }
+    
+        // Completar la contraseña con caracteres aleatorios
+        while (password.length() < longitud) {
+            String caracteres = mayusculas + minusculas + numeros;
+            index = random.nextInt(caracteres.length());
+            password += caracteres.charAt(index);
+        }
+    
+        this.contrasena = password;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el número de casos de prueba: ");
@@ -40,65 +118,6 @@ public class Password {
 
             System.out.println("Su contraseña es segura.");
         }
-    }
-
-
-    private int longitud;
-    private String contrasena;
-
-    public Password() {
-        this.longitud = 8;
-        generarPassword();
-    }
-
-    public Password(String contrasena) {
-        this.longitud = contrasena.length();
-        this.contrasena = contrasena;
-    }
-    
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public int getLongitud() {
-        return longitud;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-        this.longitud = contrasena.length();
-    }
-    
-    public boolean esFuerte() {
-        int mayusculas = 0;
-        int minusculas = 0;
-        int numeros = 0;
-
-        for (int i = 0; i < longitud; i++) {
-            char c = contrasena.charAt(i);
-            if (Character.isUpperCase(c)) {
-                mayusculas++;
-            } else if (Character.isLowerCase(c)) {
-                minusculas++;
-            } else if (Character.isDigit(c)) {
-                numeros++;
-            }
-        }
-
-        return mayusculas > 2 && minusculas > 1 && numeros > 5;
-    }
-
-    public void generarPassword() {
-        Random random = new Random();
-        String caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < longitud; i++) {
-            int index = random.nextInt(caracteres.length());
-            sb.append(caracteres.charAt(index));
-        }
-
-        this.contrasena = sb.toString();
     }
 
 }
