@@ -91,7 +91,7 @@ YES
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Actividad 3
+## Actividad 3 (Clase: Persona.java)
 
 Haz una clase llamada Persona que siga las siguientes condiciones:
 * Sus atributos son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura. No queremos que se accedan directamente a ellos. Piensa que modificador de acceso es el mas adecuado, también su tipo. Si quieres añadir algún atributo puedes hacerlo.
@@ -135,7 +135,7 @@ Ahora, crea una clase ejecutable que haga lo siguiente:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Actividad 4
+## Actividad 4(Clase: Raices.java)
 Vamos a realizar una clase llamada Raices, donde representaremos los valores de una ecuación de 2o grado. 
 
 Tendremos los 3 coeficientes como atributos, llamémosles a, b y c. Hay que insertar estos 3 valores para construir el objeto. Las operaciones que se podr ́an hacer son las siguientes:
