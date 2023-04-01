@@ -55,8 +55,13 @@ public class Password {
                 numeros++;
             }
         }
+        if(((mayusculas > 2) && (minusculas > 1)) && (numeros > 5)){
+            return true;
 
-        return mayusculas > 2 && minusculas > 1 && numeros > 5;
+        }else{
+            return false;
+        }
+        
     }
 
     public void generarPassword() {
@@ -67,17 +72,20 @@ public class Password {
 
         // Generar al menos 2 mayúsculas
         String password = "";
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             int index = random.nextInt(mayusculas.length());
             password += mayusculas.charAt(index);
         }
 
         // Generar al menos 1 minúscula
-        int index = random.nextInt(minusculas.length());
-        password += minusculas.charAt(index);
-
+        for (int i = 0; i < 2; i++) {
+            int index = random.nextInt(minusculas.length());
+            password += minusculas.charAt(index);
+        }
+        
         // Generar al menos 5 números
-        for (int i = 0; i < 5; i++) {
+        int index = random.nextInt(minusculas.length());
+        for (int i = 0; i < 6; i++) {
             index = random.nextInt(numeros.length());
             password += numeros.charAt(index);
         }
@@ -103,9 +111,14 @@ public class Password {
 
             Password password = new Password();
             boolean passwordFuerte = false;
+            
+
 
             while (!passwordFuerte) {
-                System.out.println("Su contraseña generada es: " + password.getContrasena());
+
+                password.generarPassword();
+                password.setContrasena(password.getContrasena());
+                System.out.println("Su contraseña generada es: " + password.getContrasena()+ " " +password.esFuerte());
                 System.out.print("¿Desea utilizar esta contraseña? (S/N): ");
                 String opcion = scanner.nextLine();
 
