@@ -20,6 +20,7 @@ public class Persona {
         int opcion = 0;
         Persona persona1 = null;
         Persona persona2 = null;
+        Persona persona3 = null;
 
         // Mientras no se seleccione la opción de salir, mostrar el menú
         while (opcion != 4) {
@@ -90,7 +91,7 @@ public class Persona {
                     // Crea la primera persona con los datos introducidos
                     persona1 = new Persona(nombre1, edad1, sexo1, peso1, altura1);
                     System.out.println("Datos de la primera persona introducidos correctamente");
-                    System.out.println("Persona 1: " + persona1);
+                    System.out.println("Los datos de "+ nombre1  +" son: "+ persona1);
                     break;
 
                 case 2:
@@ -155,7 +156,7 @@ public class Persona {
                     break;
 
                 default:
-                    System.out.println("Opción inválida, vuelve a intentarlo");
+                    System.out.println("Opción inválida guapo, vuelve a intentarlo");
                     break;
             }
         }
@@ -173,6 +174,16 @@ public class Persona {
     private static final int peso_ideal_normal = 0;
     private static final int peso_ideal_alto = 1;
 
+    //Persona
+    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = comprobarSexo(sexo);
+        this.peso = peso;
+        this.altura = altura;
+        generarDNI();
+    }
+
     public Persona() {
         this("", 0, sexo_por_defecto, 0, 0);
         generarDNI();
@@ -183,14 +194,6 @@ public class Persona {
         generarDNI();
     }
 
-    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = comprobarSexo(sexo);
-        this.peso = peso;
-        this.altura = altura;
-        generarDNI();
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

@@ -9,6 +9,8 @@
  */
 
 public class Raices {
+    
+    // Declaring the variables that will be used in the class.
     private double a;
     private double b;
     private double c;
