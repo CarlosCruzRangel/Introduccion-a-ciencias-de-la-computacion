@@ -55,13 +55,13 @@ public class Password {
                 numeros++;
             }
         }
-        if(((mayusculas > 2) && (minusculas > 1)) && (numeros > 5)){
+        if (((mayusculas > 2) && (minusculas > 1)) && (numeros > 5)) {
             return true;
 
-        }else{
+        } else {
             return false;
         }
-        
+
     }
 
     public void generarPassword() {
@@ -82,7 +82,7 @@ public class Password {
             int index = random.nextInt(minusculas.length());
             password += minusculas.charAt(index);
         }
-        
+
         // Generar al menos 5 números
         int index = random.nextInt(minusculas.length());
         for (int i = 0; i < 6; i++) {
@@ -111,14 +111,12 @@ public class Password {
 
             Password password = new Password();
             boolean passwordFuerte = false;
-            
-
 
             while (!passwordFuerte) {
 
                 password.generarPassword();
                 password.setContrasena(password.getContrasena());
-                System.out.println("Su contraseña generada es: " + password.getContrasena()+ " " +password.esFuerte());
+                System.out.println("Su contraseña generada es: " + password.getContrasena() + " " + password.esFuerte());
                 System.out.print("¿Desea utilizar esta contraseña? (S/N): ");
                 String opcion = scanner.nextLine();
 
