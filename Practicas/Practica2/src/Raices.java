@@ -1,3 +1,6 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 /**
  * It calculates the roots of a quadratic equation
  * 
@@ -82,5 +85,34 @@ public class Raices {
         } else {
             System.out.println("La ecuación no tiene solución real.");
         }
+    }
+
+
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double a, b, c;
+
+        // Prompt the user to input the coefficients of the quadratic equation.
+        while (true) {
+            try {
+                System.out.print("Ingrese el valor de a: ");
+                a = scanner.nextDouble();
+                System.out.print("Ingrese el valor de b: ");
+                b = scanner.nextDouble();
+                System.out.print("Ingrese el valor de c: ");
+                c = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Error: entrada inválida. Intente de nuevo.");
+                scanner.nextLine(); // Clear the input buffer.
+            }
+        }
+
+        Raices raices = new Raices(a, b, c);
+
+        raices.calcular();
     }
 }
