@@ -13,11 +13,11 @@ echo "|_______||___| |_______||_|  |__|  |___|  |_______||_|  |__||___| |______|
 
 
 
-echo "BIENVENIDO $USER A LA PRACTICA UNO "
+echo "BIENVENIDO $USER A LA PRACTICA DOS "
     date
 
 echo
-echo "EMPIEZA LA COMPILACION DE LA PRACTICA 1"
+echo "EMPIEZA LA COMPILACION DE LA PRACTICA 2"
 echo
     cd src
 
@@ -30,7 +30,7 @@ echo
 read -n 1 -s -r -p "Presione cualquier tecla para continuar..."
 echo
 \
-echo "EMPIEZA LA EJECUCION DE LA PRACTICA1"
+echo "EMPIEZA LA EJECUCION DE LA PRACTICA 2"
     # Función para mostrar el menú
 mostrar_menu() {
     echo
@@ -49,17 +49,15 @@ do
     mostrar_menu
     read opcion
     case $opcion in
-        1) java Actividad1 
+        1) java AliceBob 
             read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        2) java Actividad2 
+        2) java Persona 
             read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        3) java Actividad3 
+        3) java Raices 
             read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        4) java Actividad4 
+        4) java Password 
             read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        5) java Actividad5 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        6) "Adios buapo" ;;
+        5) "Adios buapo" ;;
         *) "Opcion Invalida" ;;
         
     esac
