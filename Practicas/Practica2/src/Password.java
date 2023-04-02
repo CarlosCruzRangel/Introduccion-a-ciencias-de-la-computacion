@@ -116,7 +116,7 @@ public class Password {
 
                 password.generarPassword();
                 password.setContrasena(password.getContrasena());
-                System.out.println("Su contraseña generada es: " + password.getContrasena() + " " + password.esFuerte());
+                System.out.println("Su contraseña generada es: " + password.getContrasena());
                 System.out.print("¿Desea utilizar esta contraseña? (S/N): ");
                 String opcion = scanner.nextLine();
 
