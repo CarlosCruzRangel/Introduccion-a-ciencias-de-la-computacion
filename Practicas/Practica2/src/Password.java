@@ -6,7 +6,7 @@ import java.util.Scanner;
  * letters, 1 lowercase letter, and 5 numbers
  * 
  * @author Carlos Cruz Rangel 312285823
- * @author Toprak Memik Hernandez
+ * @author Toprak Memik Hernandez 419002354
  * 
  * @since 1 abril 2023, UNAM
  * @version v1.0

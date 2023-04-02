@@ -35,10 +35,10 @@ echo "EMPIEZA LA EJECUCION DE LA PRACTICA1"
 mostrar_menu() {
     echo
     echo "Seleccione una opción:"
-    echo "1. Actividad 2 "
-    echo "2. Actividad 3 "
-    echo "3. Actividad 4 "
-    echo "4. Actividad 5 "
+    echo "1. Actividad 1 Juego Alice y Bob"
+    echo "2. Actividad 2 Clase Persona "
+    echo "3. Actividad 3 Clase Raices"
+    echo "4. Actividad 4 Clase Pasword "
     echo "5. Salir "
 }
 
