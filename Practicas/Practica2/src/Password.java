@@ -17,29 +17,53 @@ public class Password {
     private int longitud;
     private String contrasena;
 
+    // A constructor that sets the length of the password to 8 and generates a password.
     public Password() {
         this.longitud = 8;
         generarPassword();
     }
 
+    // A constructor that takes a string as a parameter and sets the length of the password to the
+    // length of the string and sets the password to the string.
     public Password(String contrasena) {
         this.longitud = contrasena.length();
         this.contrasena = contrasena;
     }
 
+    /**
+     * This function returns the value of the variable contrasena
+     * 
+     * @return The password.
+     */
     public String getContrasena() {
         return contrasena;
     }
 
+    /**
+     * This function returns the length of the array
+     * 
+     * @return The value of the variable longitud.
+     */
     public int getLongitud() {
         return longitud;
     }
 
+    /**
+     * The function setContrasena() sets the value of the variable contrasena to the value of the
+     * parameter contrasena, and sets the value of the variable longitud to the length of the value of
+     * the variable contrasena
+     * 
+     * @param contrasena The password to be checked.
+     */
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
         this.longitud = contrasena.length();
     }
 
+    /**
+     * It checks if the password is strong by checking if it has more than 2 uppercase letters, more
+     * than 1 lowercase letter, and more than 5 numbers
+     */
     public boolean esFuerte() {
         int mayusculas = 0;
         int minusculas = 0;
@@ -64,6 +88,9 @@ public class Password {
 
     }
 
+    /**
+     * Generate a random password with at least 3 uppercase letters, 2 lowercase letters, and 6 numbers
+     */
     public void generarPassword() {
         Random random = new Random();
         String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

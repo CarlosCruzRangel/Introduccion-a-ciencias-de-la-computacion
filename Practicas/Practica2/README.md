@@ -28,9 +28,9 @@ ________________________________
 ## Autores
 
 
-* CARLOS CRUZ RANGEL - [@Eiffelsci](https://twitter.com/Eiffelsci) - carloscruzrangel@ciencias.unam.mx
+* CARLOS CRUZ RANGEL - 312285823 - [@Eiffelsci](https://twitter.com/Eiffelsci) - carloscruzrangel@ciencias.unam.mx
 
-* TOPRAK MEMIK HERNANDEZ - [@ToprakShakur](https://twitter.com/ToprakShakur) - toprakshakur@ciencias.unam.mx 
+* TOPRAK MEMIK HERNANDEZ - 419002354 - [@ToprakShakur](https://twitter.com/ToprakShakur) - toprakshakur@ciencias.unam.mx 
 
 ___________________
 
@@ -123,7 +123,12 @@ Ahora, crea una clase ejecutable que haga lo siguiente:
 
 * Pide por teclado el nombre, la edad, sexo, peso y altura.
 
-* Crea 3 objetos de la clase anterior, el primer objeto obtendrá las anteriores variables pedidas por teclado, el segundo objeto obtendrá todos los anteriores menos el peso y la altura y el  ́ultimo por defecto, para este último utiliza los métodos set para darle a los atributos un valor. 
+* Crea 3 objetos de la clase anterior:
+  * El primer objeto obtendrá las anteriores variables pedidas por teclado
+  
+  * El segundo objeto obtendrá todas las variables por teclado menos el peso y la altura  
+  
+  * El último por defecto, para este último utiliza los métodos set para darle a los atributos un valor. 
 
 * comprobarSexo(char sexo): comprueba que el sexo introducido es correcto. Si no es correcto, sera H. No sera visible al exterior.
 

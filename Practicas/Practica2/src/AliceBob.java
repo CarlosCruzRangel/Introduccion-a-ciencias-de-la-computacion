@@ -1,14 +1,16 @@
 import java.util.Scanner;
 
-
-/** 
-* 
-* @author Carlos Cruz Rangel 312285823
-* @author Toprak Memik Hernandez 419002354
-* 
-* @since 1 abril 2023, UNAM
-* @version v1.0
-*/
+/**
+ * It reads the number of test cases, then for each test case it reads the length of the string and the
+ * string itself, then it simulates the game between Alice and Bob and finally it checks if the strings
+ * A and B are equal at the end of the game
+ * 
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprak Memik Hernandez 419002354
+ * 
+ * @since 1 abril 2023, UNAM
+ * @version v1.0
+ */
 
 public class AliceBob {
     public static void main(String[] args) {
@@ -61,5 +63,3 @@ public class AliceBob {
         scanner.close();
     }
 }
-
-
