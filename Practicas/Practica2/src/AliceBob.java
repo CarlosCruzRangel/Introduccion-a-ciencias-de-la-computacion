@@ -1,5 +1,15 @@
 import java.util.Scanner;
 
+
+/** 
+* 
+* @author Carlos Cruz Rangel 312285823
+* @author Toprak Memik Hernandez 419002354
+* 
+* @since 1 abril 2023, UNAM
+* @version v1.0
+*/
+
 public class AliceBob {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
