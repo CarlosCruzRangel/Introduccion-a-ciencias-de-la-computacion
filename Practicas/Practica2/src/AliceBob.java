@@ -27,7 +27,7 @@ public class AliceBob {
             int N = scanner.nextInt();
             scanner.nextLine(); // leer el salto de línea después del número de caracteres
             System.out.print("Ingrese la cadena S: ");
-            String S = scanner.nextLine();
+            String S = scanner.nextLine().toLowerCase();
 
             // Inicializar las cadenas A y B como cadenas vacías
             String A = "";
