@@ -40,7 +40,7 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
     echo ------------------------------------------------------------------------------
     echo Este es un menu interectivo ingresa el numero de la opcion que te interese. 
    
-    echo  Opcion 1     Ejecutar Actividad dos
+    echo  Opcion 1     Ejecutar Actividad dos "(AliceBob.java)"
     echo  Opcion 2     Ejecutar Actividad tres "(Persona.java)"
     echo  Opcion 3     Ejecutar Actividad cuatro "(Raices.java)"
     echo  Opcion 4     Ejecutar Actividad cinco "(Password.java)"    
@@ -67,7 +67,7 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
         echo. Has elegido la opcion Actividad 2 
         echo  Esto es un programa de un juego de Alice y Bob.
         echo.
-        
+        java AliceBob    
 
 
         

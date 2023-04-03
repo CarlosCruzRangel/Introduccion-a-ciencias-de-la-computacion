@@ -52,7 +52,7 @@ Carro carroCaiden = new Carro();
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Actividad 2
+## Actividad 2 (Clase: AliceBob.java)
 Alice y Bob están jugando a un juego. Tienen una cadena común S de longitud N. Los jugadores también tienen sus cadenas individuales A (perteneciente a Alice) y B(perteneciente a Bob) que están vacías al principio. El juego comienza con Alice y ambos jugadores alternan sus turnos. En su turno, el jugador elige un único carácter de la cadena S, lo añade al final de su cadena individual y borra el carácter elegido de la cadena S. El juego continúa hasta que la cadena S está vacía. Averigua si existe una secuencia de movimientos tal que las cadenas A y B sean iguales al final de la partida.
 
 |   |

@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,153 +14,6 @@ import java.util.Scanner;
 
 public class Persona {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int opcion = 0;
-        Persona persona1 = null;
-        Persona persona2 = null;
-        Persona persona3 = null;
-
-        // Mientras no se seleccione la opción de salir, mostrar el menú
-        while (opcion != 4) {
-            System.out.println("MENU:");
-            System.out.println("1. Introducir datos de la primera persona");
-            System.out.println("2. Introducir datos de la segunda persona");
-            System.out.println("3. Mostrar resultados");
-            System.out.println("4. Salir");
-            System.out.print("Selecciona una opción: ");
-
-            // Controlar que el usuario introduzca un número válido
-            try {
-                opcion = sc.nextInt();
-                sc.nextLine(); // Consumir el salto de línea
-            } catch (InputMismatchException e) {
-                System.out.println("ERROR: Debes introducir un número");
-                sc.nextLine(); // Consumir la entrada errónea
-                continue; // Volver a mostrar el menú
-            }
-
-            switch (opcion) {
-                case 1:
-                    // Pide por teclado los datos de la primera persona
-                    System.out.println("Introduce los datos de la primera persona:");
-                    System.out.print("Nombre: ");
-                    String nombre1 = sc.nextLine();
-                    System.out.print("Edad: ");
-
-                    // Controlar que el usuario introduzca un número válido
-                    int edad1 = 0;
-                    try {
-                        edad1 = sc.nextInt();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-
-                    System.out.print("Sexo (H/M): ");
-                    char sexo1 = sc.nextLine().charAt(0);
-                    System.out.print("Peso: ");
-                    double peso1 = 0;
-
-                    // Controlar que el usuario introduzca un número válido
-                    try {
-                        peso1 = sc.nextDouble();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-
-                    System.out.print("Altura: ");
-                    double altura1 = 0;
-
-                    // Controlar que el usuario introduzca un número válido
-                    try {
-                        altura1 = sc.nextDouble();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-
-                    // Crea la primera persona con los datos introducidos
-                    persona1 = new Persona(nombre1, edad1, sexo1, peso1, altura1);
-                    System.out.println("Datos de la primera persona introducidos correctamente");
-                    System.out.println("Los datos de "+ nombre1  +" son: "+ persona1);
-                    break;
-
-                case 2:
-                    // Pide por teclado los datos de la segunda persona
-                    System.out.println("Introduce los datos de la segunda persona:");
-                    System.out.print("Nombre: ");
-                    String nombre2 = sc.nextLine();
-                    System.out.print("Edad: ");
-
-                    // Controlar que el usuario introduzca un número válido
-                    int edad2 = 0;
-                    try {
-                        edad2 = sc.nextInt();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-                    System.out.print("Sexo (H/M): ");
-                    char sexo2 = sc.nextLine().charAt(0);
-                    System.out.print("Peso: ");
-                    double peso2 = 0;
-
-                    // Controlar que el usuario introduzca un número válido
-                    try {
-                        peso2 = sc.nextDouble();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-
-                    System.out.print("Altura: ");
-                    double altura2 = 0;
-
-                    // Controlar que el usuario introduzca un número válido
-                    try {
-                        altura2 = sc.nextDouble();
-                        sc.nextLine(); // Consumir el salto de línea
-                    } catch (InputMismatchException e) {
-                        System.out.println("ERROR: Debes introducir un número");
-                        sc.nextLine(); // Consumir la entrada errónea
-                        continue; // Volver a mostrar el menú
-                    }
-
-                    // Crea la segunda persona con los datos introducidos
-                    persona2 = new Persona(nombre2, edad2, sexo2, peso2, altura2);
-                    System.out.println("Datos de la segunda persona introducidos correctamente");
-                    break;
-
-                case 3:
-                    // Muestra los resultados de ambas personas
-                    System.out.println("RESULTADOS:");
-                    System.out.println("Persona 1: " + persona1);
-                    System.out.println("Persona 2: " + persona2);
-                    break;
-
-                case 4:
-                    System.out.println("Saliendo del programa...");
-                    break;
-
-                default:
-                    System.out.println("Opción inválida guapo, vuelve a intentarlo");
-                    break;
-            }
-        }
-    }
-
     private String nombre;
     private int edad;
     private String dni;
@@ -174,7 +26,7 @@ public class Persona {
     private static final int peso_ideal_normal = 0;
     private static final int peso_ideal_alto = 1;
 
-    //Persona
+    // Persona
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
@@ -193,7 +45,6 @@ public class Persona {
         this(nombre, edad, sexo_por_defecto, peso, 0);
         generarDNI();
     }
-
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -249,8 +100,10 @@ public class Persona {
             return peso_ideal_bajo;
         } else if (imc >= 20 && imc <= 25) {
             return peso_ideal_normal;
-        } else {
+        } else if (imc > 25) {
             return peso_ideal_alto;
+        } else {
+            return 0;
         }
     }
 
@@ -283,6 +136,112 @@ public class Persona {
                 System.out.println("Estas por encima de tu peso ideal");
                 break;
         }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // First Person
+
+        System.out.println("\n Introduce los datos de la primera persona:");
+
+        // Asking the user to input a name, and then it is assigning it to the variable
+        // nombre1.
+        System.out.print("Nombre: ");
+        String nombre1 = scanner.nextLine();
+
+        // Asking the user to input a years, and then it is assigning it to the variable
+        // edad1.
+        System.out.print("Edad: ");
+        int edad1 = scanner.nextInt();
+
+        scanner.nextLine();
+
+        // Asking the user to input a sex, and then it is assigning it to the variable
+        // sexo1.
+        System.out.print("Sexo (M/H): ");
+        char sexo1 = scanner.nextLine().charAt(0);
+
+        // Asking the user to input a weight, and then it is assigning it to the
+        // variable peso1.
+        System.out.print("Peso (kg): ");
+        double peso1 = scanner.nextDouble();
+
+        // Asking the user to input a height, and then it is assigning it to the
+        // variable altura1.
+        System.out.print("Altura (m): ");
+        double altura1 = scanner.nextDouble();
+
+        // Creating a new object of the class Persona, and it is assigning it to the
+        // variable persona1.
+        Persona persona1 = new Persona(nombre1, edad1, sexo1, peso1, altura1);
+
+        scanner.nextLine();
+
+        // Second Person
+
+        System.out.println("\n Introduce los datos de la segunda persona:");
+        // Asking the user to input a name, and then it is assigning it to the variable
+        // nombre1.
+
+        System.out.print("Nombre: ");
+        String nombre2 = scanner.nextLine();
+
+        // Asking the user to input a years, and then it is assigning it to the variable
+        // edad1.
+        System.out.print("Edad: ");
+        int edad2 = scanner.nextInt();
+
+        scanner.nextLine();
+
+        // Asking the user to input a sex, and then it is assigning it to the variable
+        // sexo1.
+        System.out.print("Sexo (M/H): ");
+        char sexo2 = scanner.nextLine().charAt(0);
+
+        // Creating a new object of the class Persona, and it is assigning it to the
+        // variable persona1.
+        Persona persona2 = new Persona(nombre2, edad2, sexo2, 0, 0);
+
+        // Third Person
+
+        String nombre3 = "Persona Por Defecto";
+        int edad3 = 0;
+        double peso3 = 0;
+        double altura3 = 0;
+        Persona persona3 = new Persona();
+        persona3.setNombre(nombre3);
+        persona3.setEdad(edad3);
+        persona3.setPeso(peso3);
+        persona3.setAltura(altura3);
+
+        // Information to print
+        System.out.println("\n===== Información de las personas =====");
+
+        // Printing the information of the first person.
+
+        System.out.println("\033[31m");
+        System.out.println("1. " + persona1.toString());
+        persona1.mostrarMensajePeso();
+        System.out.println("Es mayor de edad: " + persona1.esMayorDeEdad() + "\n");
+
+        // Printing the information of the second person.
+        System.out.println("\033[32m");
+        System.out.println("2. " + persona2.toString());
+        persona2.mostrarMensajePeso();
+        System.out.println("Es mayor de edad: " + persona2.esMayorDeEdad() + "\n");
+        System.out.println("\033[0m");
+
+        // Printing the information of the third person.
+        System.out.println("\033[33m");
+        System.out.println("3. " + persona3.toString());
+        persona3.mostrarMensajePeso();
+        System.out.println("Es mayor de edad: " + persona3.esMayorDeEdad() + "\n");
+        System.out.println("\033[0m");
+
+        scanner.close();
+
     }
 
 }
