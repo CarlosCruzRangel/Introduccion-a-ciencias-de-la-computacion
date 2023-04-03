@@ -65,23 +65,27 @@ public class Password {
      * than 1 lowercase letter, and more than 5 numbers
      */
     public boolean esFuerte() {
+        // Variables for counting the number of uppercase letters, lowercase letters, and numbers in the password.
         int mayusculas = 0;
         int minusculas = 0;
         int numeros = 0;
 
+        
         for (int i = 0; i < longitud; i++) {
             char c = contrasena.charAt(i);
-            if (Character.isUpperCase(c)) {
+            if (Character.isUpperCase(c)) {// Checking if the character is an uppercase letter.
                 mayusculas++;
-            } else if (Character.isLowerCase(c)) {
+            } else if (Character.isLowerCase(c)) {// Checking if the character is a lowercase letter.
                 minusculas++;
-            } else if (Character.isDigit(c)) {
+            } else if (Character.isDigit(c)) { // Checking if the character is a number.
                 numeros++;
             }
         }
+        
+        // Checking if the password has more than 2 uppercase letters, more than 1 lowercase letter,
+        // and more than 5 numbers.
         if (((mayusculas > 2) && (minusculas > 1)) && (numeros > 5)) {
             return true;
-
         } else {
             return false;
         }
@@ -93,31 +97,37 @@ public class Password {
      */
     public void generarPassword() {
         Random random = new Random();
+        // Creating a string with all the uppercase letters, lowercase letters, and numbers.
         String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
         String numeros = "0123456789";
 
-        // Generar al menos 2 mayúsculas
+        
+        // Generating a random password with at least 3 uppercase letters, 2 lowercase letters, and 6
+        // numbers
         String password = "";
         for (int i = 0; i < 3; i++) {
             int index = random.nextInt(mayusculas.length());
             password += mayusculas.charAt(index);
         }
 
-        // Generar al menos 1 minúscula
+        
+        // Adding 2 lowercase letters to the password.
         for (int i = 0; i < 2; i++) {
             int index = random.nextInt(minusculas.length());
             password += minusculas.charAt(index);
         }
 
-        // Generar al menos 5 números
+        
+        // Adding 6 random numbers to the password.
         int index = random.nextInt(minusculas.length());
         for (int i = 0; i < 6; i++) {
             index = random.nextInt(numeros.length());
             password += numeros.charAt(index);
         }
 
-        // Completar la contraseña con caracteres aleatorios
+        
+        // Adding random characters to the password until it reaches the length of the password.
         while (password.length() < longitud) {
             String caracteres = mayusculas + minusculas + numeros;
             index = random.nextInt(caracteres.length());
@@ -134,13 +144,12 @@ public class Password {
         scanner.nextLine();
 
         for (int i = 0; i < numCasos; i++) {
-            System.out.println("\nCASO DE PRUEBA #" + (i + 1));
+            System.out.println("\nEste es el caso de prueba N." + (i + 1));
 
             Password password = new Password();
             boolean passwordFuerte = false;
 
             while (!passwordFuerte) {
-
                 password.generarPassword();
                 password.setContrasena(password.getContrasena());
                 System.out.println("Su contraseña generada es: " + password.getContrasena());
@@ -150,8 +159,8 @@ public class Password {
                 if (opcion.equalsIgnoreCase("S")) {
                     passwordFuerte = password.esFuerte();
                     if (!passwordFuerte) {
-                        System.out.println("Su contraseña no cumple con los requisitos de seguridad.");
-                        System.out.println("Debe tener más de 2 mayúsculas, más de 1 minúscula y más de 5 números.");
+                        System.out.println("\033[31m" + "Su contraseña no cumple con los requisitos" + "\033[0m");
+                        System.out.println("\033[31m" + "Debe tener al menos 3 mayúsculas, al menos 2 minusculas y como minimo 6 numeritos" + "\033[0m");
                     }
                 } else {
                     System.out.print("Ingrese su propia contraseña: ");
@@ -159,13 +168,13 @@ public class Password {
                     password.setContrasena(nuevaContrasena);
                     passwordFuerte = password.esFuerte();
                     if (!passwordFuerte) {
-                        System.out.println("Su contraseña no cumple con los requisitos de seguridad.");
-                        System.out.println("Debe tener más de 2 mayúsculas, más de 1 minúscula y más de 5 números.");
+                        System.out.println("\033[31m" + "Su contraseña no cumple con los requisitos" + "\033[0m");
+                        System.out.println("\033[31m" + "Debe tener al menos 3 mayúsculas, al menos 2 minusculas y como minimo 6 numeritos" + "\033[0m");
                     }
                 }
             }
 
-            System.out.println("Su contraseña es segura.");
+            System.out.println("\033[32m" + "Su contraseña es segura." + "\033[0m");
         }
     }
 
