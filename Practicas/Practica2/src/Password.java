@@ -174,7 +174,7 @@ public class Password {
                 }
             }
 
-            System.out.println("\033[32m" + "Su contraseña es segura." + "\033[0m");
+            System.out.println("\033[32m" + "Su contraseña cumplio con todos los requisitos y se guardo." + "\033[0m");
         }
     }
 
