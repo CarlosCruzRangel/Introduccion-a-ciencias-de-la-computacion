@@ -24,7 +24,7 @@ public interface Idioma {
     * @param palabra La palabra de la que se quiere su antónimo.
     * @return el antónimo de la palabra en Solresol.
     */
-    public String daAntonimo ( String palabra );
+    public String daAntonimo(String palabra);
     
     /**
     * Devuelve la notación abreviada de una palabra en Solresol.
@@ -32,7 +32,7 @@ public interface Idioma {
     * @param palabra La palabra que se quiere abreviar.
     * @return la abreviación de la palabra en Solresol.
     */
-    public String daNotacionAbreviada ( String palabra );
+    public String daNotacionAbreviada(String palabra);
     
     /**
     * Devuelve la notación completa de una palabra en Solresol.
@@ -40,5 +40,5 @@ public interface Idioma {
     * @param abreviacion La apreviacion de una palabra.
     * @return la palabra escrita en notación completa.
     */
-    public String daNotacionCompleta ( String abreviacion );
+    public String daNotacionCompleta(String abreviacion);
 }
