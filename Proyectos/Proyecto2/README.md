@@ -62,7 +62,7 @@ Este proyecto fue hecho VSCode usando como lenguaje de programación a java.
 ```
 Proyecto2
 ├──────────Folder "src"
-│            ├───
+│            ├───Idioma.java(Interfaz)
 │            ├───
 │            ├───
 │            ├───Main.java

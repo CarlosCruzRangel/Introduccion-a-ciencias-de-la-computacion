@@ -11,12 +11,16 @@ public class Solresol implements Idioma {
     public boolean esSolresol(String cadena) {
         // Verificar longitud de la cadena
         if (cadena.length() > 16 || cadena.length() < 2) {
+            System.out.println("La longitud fallo");
+            
             return false;
         }
         // Verificar que solo contiene silabas válidas
         for (int i = 0; i < cadena.length(); i += 2) {
             String silaba = cadena.substring(i, i + 2);
             if (!esSilaba(silaba)) {
+                System.out.println("NO paso la verificacion de silabas validas");
+                
                 return false;
             }
         }
@@ -26,6 +30,8 @@ public class Solresol implements Idioma {
             String silaba2 = cadena.substring(i + 2, i + 4);
             String silaba3 = cadena.substring(i + 4, i + 6);
             if (silaba1.equals(silaba2) && silaba2.equals(silaba3)) {
+                System.out.println("NO paso la verificacion de repeticion");
+                
                 return false;
             }
         }
@@ -41,9 +47,12 @@ public class Solresol implements Idioma {
     private boolean esSilaba(String silaba) {
         for (String s : silabas) {
             if (s.equals(silaba)) {
+                System.out.println(silaba + " : esSilaba() SI la reconocio como silaba");
                 return true;
             }
         }
+        System.out.println(silaba + " : esSilaba() NO la reconoce como silaba");
+        
         return false;
     }
 
