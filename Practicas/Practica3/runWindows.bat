@@ -2,12 +2,12 @@
 
 ::RUN para windows 
 :: 
-::Programa que compila y corre practica 1
+::Programa que compila y corre practica 3
 :: 
 ::@author Carlos Cruz Rangel
 ::@author Toprak Memik Hernandez
 :: 
-::@since 26 de Febrero 2022
+::@since 26 de Abril 2022
 ::@version v1.0
 
 echo
@@ -40,10 +40,10 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
     echo ------------------------------------------------------------------------------
     echo Este es un menu interectivo ingresa el numero de la opcion que te interese. 
    
-    echo  Opcion 1     Ejecutar Actividad dos "(AliceBob.java)"
-    echo  Opcion 2     Ejecutar Actividad tres "(Persona.java)"
-    echo  Opcion 3     Ejecutar Actividad cuatro "(Raices.java)"
-    echo  Opcion 4     Ejecutar Actividad cinco "(Password.java)"    
+    echo  Opcion 1     Ejecutar Actividad uno "(SumaMatrices.java)"
+    echo  Opcion 2     Ejecutar Actividad dos "(RestaMatrices.java)"
+    echo  Opcion 3     Ejecutar Actividad tres "(ProductoEscalar.java)"
+    echo  Opcion 4     Ejecutar Actividad cuatro "(ProductoMatrices.java)"    
     echo  Opcion 5     Salir 
 
     SET /p var= ^> Seleccione una opcion [1-5]:
@@ -64,10 +64,10 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
 
     :op1
         echo.
-        echo. Has elegido la opcion Actividad 2 
-        echo  Esto es un programa de un juego de Alice y Bob.
+        echo. Has elegido la opcion Actividad 1 
+        echo  Esto es un programa que suma dos matrices cuadradas.
         echo.
-        java AliceBob    
+        java SumaMatrices
 
 
         
@@ -77,10 +77,10 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
 
     :op2
                echo.
-        echo. Has elegido la opcion Actividad 3
-        echo  Esto es un programa que calcula el IMC de 3 personas.
+        echo. Has elegido la opcion Actividad 2
+        echo  Esto es un programa que resta dos matruces cuadradas
         echo.
-        java Persona
+        java RestaMatrices
        
         
         echo.
@@ -89,10 +89,10 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
 
     :op3
         echo.
-        echo. Has elegido la opcion Actividad 4
-        echo  Esto es un programa que resulve ecuciones de grado 2
+        echo. Has elegido la opcion Actividad 3
+        echo  Esto es un programa que te da el producto escalar.
         echo.
-        java Raices      
+        java ProductoEscalar
 
         
         echo.
@@ -101,10 +101,10 @@ echo EMPIEZA LA EJECUCION DE LA PRACTICA
 
     :op4
         echo.
-        echo. Has elegido la opcion Actividad 5
-        echo Esto es un programa que genera contraseñas seguras.
+        echo. Has elegido la opcion Actividad 4
+        echo Esto es un programa que te da el producto entre matrices.
         echo.
-        java Password
+        java ProductoMatrices
 
         
         echo.

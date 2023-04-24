@@ -85,6 +85,7 @@ Dos matrices A y B son multiplicables si el número de columnas de A coincide co
 El elemento c_ij de la matriz producto se obtiene multiplicando cada elemento de la fila i de la matriz A por cada elemento de la columna j de la matriz B y sumándolos.
 
 ![imagen](https://user-images.githubusercontent.com/91149209/234077188-11498614-d876-433e-9970-97aa78f8e9e7.png)
+![imagen](https://user-images.githubusercontent.com/91149209/234085435-7478aff0-80e1-4aa7-bb9d-0eb81fd100d6.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
