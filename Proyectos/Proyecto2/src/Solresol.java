@@ -29,15 +29,29 @@ public class Solresol implements Idioma {
                 return false;
             }
         }
-        // Verificar que no se repiten más de dos veces consecutivas la misma silaba
-        for (i = 0; i < cadena.length() - 4; i += 2) {
-            String silaba1 = cadena.substring(i, i + 2);
-            String silaba2 = cadena.substring(i + 2, i + 4);
-            String silaba3 = cadena.substring(i + 4, i + 6);
-            if (silaba1.equals(silaba2) && silaba2.equals(silaba3)) {
-                System.out.println("NO paso la verificacion de repeticion");
+        // Verificar que no se repiten tres o más veces consecutivas la misma silaba
+        int repeticionesConsecutivas = 1;
+        String ultimaSilaba = "";
+        for (i = 0; i < cadena.length(); i += ultimaSilaba.length()) {
+            String silaba = "";
+            if (i + 2 < cadena.length() && esSilaba(cadena.substring(i, i + 3))) {
+                silaba = cadena.substring(i, i + 3);
+            } else if (i + 1 < cadena.length() && esSilaba(cadena.substring(i, i + 2))) {
+                silaba = cadena.substring(i, i + 2);
+            } else {
+                System.out.println("NO pasó la verificación de silabas validas");
                 return false;
             }
+            if (silaba.equals(ultimaSilaba)) {
+                repeticionesConsecutivas++;
+                if (repeticionesConsecutivas >= 3) {
+                    System.out.println("NO pasó la verificación de repeticion");
+                    return false;
+                }
+            } else {
+                repeticionesConsecutivas = 1;
+            }
+            ultimaSilaba = silaba;
         }
         return true;
     }
