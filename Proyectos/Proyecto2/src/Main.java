@@ -1,5 +1,14 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+/**
+ * Clase ejecutable
+ * 
+ * @author Carlos Cruz Rangel
+ * @author Toprak Memik Hernandez
+ * 
+ * @since Abril 25 del 2023, UNAM.
+ * @version v1.0
+ */
 
 public class Main {
 
