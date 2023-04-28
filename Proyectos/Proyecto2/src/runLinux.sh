@@ -13,24 +13,24 @@ echo "|_______||___| |_______||_|  |__|  |___|  |_______||_|  |__||___| |______|
 
 
 
-echo "BIENVENIDO $USER AL PROYECTO 1 "
+echo "BIENVENIDO $USER AL PROYECTO 2 "
     date
 
 echo
-echo "EMPIEZA LA COMPILACION DEL PROYECTO 1"
+echo "EMPIEZA LA COMPILACION DEL PROYECTO 2"
 echo
 echo "...Compilando..."
 echo
 
     javac *.java
 
-echo "TERMINA LA COMPILACION DEL PROYECTO 1"
+echo "TERMINA LA COMPILACION DEL PROYECTO 2"
 echo
 
 
 read -n 1 -s -r -p "Presione cualquier tecla para continuar..."
 echo
 \
-echo "EMPIEZA LA EJECUCION DEL PROYECTO 1"
+echo "EMPIEZA LA EJECUCION DEL PROYECTO 2"
  java Main
 

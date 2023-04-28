@@ -1,21 +1,44 @@
-import java.util.*;
+/**
+ * The Solresol class is a Java implementation of a language called Solresol,
+ * which includes methods for verifying the syntax of Solresol strings, finding
+ * antonyms of Solresol words, and converting between abbreviated and full
+ * Solresol notation.
+ * 
+ * @author Carlos Cruz Rangel
+ * @author Toprak Memik Hernandez
+ * 
+ * @since Abril. 27 del 2023, UNAM.
+ * @version v1.0
+ */
+
 public class Solresol implements Idioma {
 
-    private static final String[] silabas = {"do", "re", "mi", "fa", "sol", "la", "si"};
+    // Silabas validas en Solresol
+    private static final String[] silabas = { "do", "re", "mi", "fa", "sol", "la", "si" };
 
     /**
+     * ************************************************************************************
+     * PRIMER METODO
      * Verifica que una cadena sea sintácticamente correcta en Solresol
      *
      * @param cadena La cadena a verificar.
      * @return true si es válida, false en otro caso.
+     * ************************************************************************************
      */
     public boolean esSolresol(String cadena) {
-        // Verificar longitud de la cadena
+
+        /**
+         * Verificar longitud de la cadena, en el peor de los casos una cadena correcta
+         * tiene a lo mas 10 caracteres
+         */
         if (cadena.length() > 10 || cadena.length() < 2) {
-            System.out.println("La longitud fallo");
             return false;
         }
-        // Verificar que solo contiene silabas válidas
+
+        /**
+         * Verificar que solo contiene silabas válidas, las silabas validas son:
+         * { "do", "re", "mi", "fa", "sol", "la", "si" }
+         */
         int i = 0;
         while (i < cadena.length()) {
             String silaba;
@@ -26,11 +49,14 @@ public class Solresol implements Idioma {
                 silaba = cadena.substring(i, i + 2);
                 i += 2;
             } else {
-                System.out.println("NO paso la verificacion de silabas validas");
+                System.out.println("Tu palabra que ingresaste tiene algun elemento que no pertenece a Solresol");
                 return false;
             }
         }
-        // Verificar que no se repiten tres o más veces consecutivas la misma silaba
+
+        /**
+         * Verificar para evitar mas de dos repeticiones de alguna silaba
+         */
         int repeticionesConsecutivas = 1;
         String ultimaSilaba = "";
         for (i = 0; i < cadena.length(); i += ultimaSilaba.length()) {
@@ -40,13 +66,12 @@ public class Solresol implements Idioma {
             } else if (i + 1 < cadena.length() && esSilaba(cadena.substring(i, i + 2))) {
                 silaba = cadena.substring(i, i + 2);
             } else {
-                System.out.println("NO pasó la verificación de silabas validas");
                 return false;
             }
             if (silaba.equals(ultimaSilaba)) {
                 repeticionesConsecutivas++;
                 if (repeticionesConsecutivas >= 3) {
-                    System.out.println("NO pasó la verificación de repeticion");
+                    System.out.println("Hay alguna silaba repetida mas de dos veces y de manera consecutiva");
                     return false;
                 }
             } else {
@@ -55,36 +80,42 @@ public class Solresol implements Idioma {
             ultimaSilaba = silaba;
         }
         return true;
+
     }
 
     /**
+     * ************************************************************************************
+     * METODO AUXILIAR
      * Verifica si una silaba es válida en Solresol.
      *
      * @param silaba La silaba a verificar.
      * @return true si es válida, false en otro caso.
+     * ************************************************************************************
      */
     private boolean esSilaba(String silaba) {
+
         for (String s : silabas) {
             if (s.equals(silaba)) {
-                System.out.println(silaba + " : esSilaba() SI la reconoció como silaba");
                 return true;
             }
         }
-        System.out.println(silaba + " : esSilaba() NO la reconoce como silaba");
         return false;
     }
 
-
     /**
-     * Verifica que una cadena sea sintácticamente correcta en Solresol
+     * ************************************************************************************
+     * SEGUNDO METODO
+     * Devuelve el antónimo formado después de invertir el orden de
+     * las sílabas.
      *
-     * @param cadena La cadena a verificar.
-     * @return true si es válida, false en otro caso.
+     * @param palabra La palabra de la que se quiere su antónimo.
+     * @return el antónimo de la palabra en Solresol.
+     * ************************************************************************************
      */
-    @Override
     public String daAntonimo(String palabra) {
+
         String antonimo = "";
-        for (int i = palabra.length() - 1; i >= 0; ) {
+        for (int i = palabra.length() - 1; i >= 0;) {
             String silaba = "";
             if (i - 2 >= 0 && esSilaba(palabra.substring(i - 2, i + 1))) {
                 silaba = palabra.substring(i - 2, i + 1);
@@ -93,32 +124,32 @@ public class Solresol implements Idioma {
                 silaba = palabra.substring(i - 1, i + 1);
                 i -= 2;
             } else {
-                // Si no es una silaba valida, devolver la cadena vacía
                 return "";
             }
             antonimo += silaba;
         }
         return antonimo;
     }
-    
-    
-    
 
-         
-    
-    
+    /**
+     * ************************************************************************************
+     * TERCER METODO
+     * Devuelve la notación abreviada de una palabra en Solresol.
+     *
+     * @param palabra La palabra que se quiere abreviar.
+     * @return la abreviación de la palabra en Solresol.
+     * ************************************************************************************
+     */
+    public String daNotacionAbreviada(String palabra) {
 
-    public String daNotacionAbreviada(String word) {
         StringBuilder abreviacion = new StringBuilder();
         int i = 0;
-        while (i < word.length()) {
-            if (i < word.length() - 2 && word.substring(i, i+2).equals("so")) {
-                // Handle special case for "sol"
+        while (i < palabra.length()) {
+            if (i < palabra.length() - 2 && palabra.substring(i, i + 2).equals("so")) {
                 abreviacion.append("so");
                 i += 3;
             } else {
-                // Look for the corresponding syllable and add its first letter to the abreviacion
-                String letra = String.valueOf(word.charAt(i)).toLowerCase();
+                String letra = String.valueOf(palabra.charAt(i)).toLowerCase();
                 for (String silaba : silabas) {
                     if (silaba.startsWith(letra)) {
                         abreviacion.append(silaba.substring(0, 1));
@@ -131,15 +162,23 @@ public class Solresol implements Idioma {
         return abreviacion.toString();
     }
 
+    /**
+     * ************************************************************************************
+     * CUARTO METODO
+     * Devuelve la notación completa de una palabra en Solresol.
+     *
+     * @param abreviacion La apreviacion de una palabra.
+     * @return la palabra escrita en notación completa.
+     * ************************************************************************************
+     */
     public String daNotacionCompleta(String abreviacion) {
-        
 
         StringBuilder result = new StringBuilder();
         int i = 0;
+
         while (i < abreviacion.length()) {
             char currentChar = abreviacion.charAt(i);
             if (currentChar == 's') {
-                // If we encounter an 's', we need to check the next character to see if it's another 's'
                 i++;
                 if (i < abreviacion.length() && abreviacion.charAt(i) == 'o') {
                     result.append("sol");
@@ -148,7 +187,6 @@ public class Solresol implements Idioma {
                     i--;
                 }
             } else {
-                // For other characters, we can just append their full Solresol notation
                 switch (currentChar) {
                     case 'd':
                         result.append("do");
@@ -171,5 +209,4 @@ public class Solresol implements Idioma {
         }
         return result.toString();
     }
-    
 }
