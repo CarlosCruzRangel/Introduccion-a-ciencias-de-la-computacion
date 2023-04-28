@@ -83,10 +83,29 @@ public class Solresol implements Idioma {
      */
     @Override
     public String daAntonimo(String palabra) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'daAntonimo'");
-         
+        String antonimo = "";
+        for (int i = palabra.length() - 1; i >= 0; ) {
+            String silaba = "";
+            if (i - 2 >= 0 && esSilaba(palabra.substring(i - 2, i + 1))) {
+                silaba = palabra.substring(i - 2, i + 1);
+                i -= 3;
+            } else if (i - 1 >= 0 && esSilaba(palabra.substring(i - 1, i + 1))) {
+                silaba = palabra.substring(i - 1, i + 1);
+                i -= 2;
+            } else {
+                // Si no es una silaba valida, devolver la cadena vacía
+                return "";
+            }
+            antonimo += silaba;
+        }
+        return antonimo;
     }
+    
+    
+    
+
+         
+    
     
 
     public String daNotacionAbreviada(String word) {
