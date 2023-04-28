@@ -1,3 +1,4 @@
+import java.util.*;
 public class Solresol implements Idioma {
 
     private static final String[] silabas = {"do", "re", "mi", "fa", "sol", "la", "si"};
@@ -74,22 +75,82 @@ public class Solresol implements Idioma {
     }
 
 
-
+    /**
+     * Verifica que una cadena sea sintácticamente correcta en Solresol
+     *
+     * @param cadena La cadena a verificar.
+     * @return true si es válida, false en otro caso.
+     */
     @Override
     public String daAntonimo(String palabra) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'daAntonimo'");
+         
+    }
+    
+
+    public String daNotacionAbreviada(String word) {
+        StringBuilder abreviacion = new StringBuilder();
+        int i = 0;
+        while (i < word.length()) {
+            if (i < word.length() - 2 && word.substring(i, i+2).equals("so")) {
+                // Handle special case for "sol"
+                abreviacion.append("so");
+                i += 3;
+            } else {
+                // Look for the corresponding syllable and add its first letter to the abreviacion
+                String letra = String.valueOf(word.charAt(i)).toLowerCase();
+                for (String silaba : silabas) {
+                    if (silaba.startsWith(letra)) {
+                        abreviacion.append(silaba.substring(0, 1));
+                        break;
+                    }
+                }
+                i++;
+            }
+        }
+        return abreviacion.toString();
     }
 
-    @Override
-    public String daNotacionAbreviada(String palabra) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'daNotacionAbreviada'");
-    }
-
-    @Override
     public String daNotacionCompleta(String abreviacion) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'daNotacionCompleta'");
+        
+
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+        while (i < abreviacion.length()) {
+            char currentChar = abreviacion.charAt(i);
+            if (currentChar == 's') {
+                // If we encounter an 's', we need to check the next character to see if it's another 's'
+                i++;
+                if (i < abreviacion.length() && abreviacion.charAt(i) == 'o') {
+                    result.append("sol");
+                } else {
+                    result.append("si");
+                    i--;
+                }
+            } else {
+                // For other characters, we can just append their full Solresol notation
+                switch (currentChar) {
+                    case 'd':
+                        result.append("do");
+                        break;
+                    case 'r':
+                        result.append("re");
+                        break;
+                    case 'm':
+                        result.append("mi");
+                        break;
+                    case 'f':
+                        result.append("fa");
+                        break;
+                    case 'l':
+                        result.append("la");
+                        break;
+                }
+            }
+            i++;
+        }
+        return result.toString();
     }
+    
 }
