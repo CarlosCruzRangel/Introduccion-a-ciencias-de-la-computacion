@@ -11,7 +11,7 @@ public class Solresol implements Idioma {
      */
     public boolean esSolresol(String cadena) {
         // Verificar longitud de la cadena
-        if (cadena.length() > 16 || cadena.length() < 2) {
+        if (cadena.length() > 10 || cadena.length() < 2) {
             System.out.println("La longitud fallo");
             return false;
         }
