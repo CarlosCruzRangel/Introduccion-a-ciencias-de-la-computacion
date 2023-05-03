@@ -61,10 +61,10 @@ Esta práctica fue hecha VSCode usando como lenguaje a java.
 ```
 Practica3
 ├──────────Folder "src"
-│            ├───SumaMatrices.java
-│            ├───RestaMatrices.java
-│            ├───Actividad3.java
-│            └───Actividad4.java
+│            ├───Lista.java (Interfaz)
+│            ├───ListaSimple.java
+│            ├───Main.java
+│            └───Nodo.java
 ├───runLinux.sh
 ├───runWindows.bat
 └───Readme.md
