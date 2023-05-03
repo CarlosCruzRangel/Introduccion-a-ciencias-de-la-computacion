@@ -1,3 +1,13 @@
+/**
+ * El codigo hace las operaciones basicas en una lista
+ * 
+ * @author Carlos Cruz Rangel 312285823
+ * @author Toprak Memik Hernandez 419002354
+ * 
+ * @since 2 mayo 2023, UNAM
+ * @version v1.0
+ *  
+ */
 public interface Lista {
 	
 	/**

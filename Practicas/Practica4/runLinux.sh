@@ -31,38 +31,5 @@ read -n 1 -s -r -p "Presione cualquier tecla para continuar..."
 echo
 \
 echo "EMPIEZA LA EJECUCION DE LA PRACTICA 3"
-    # Función para mostrar el menú
-mostrar_menu() {
-    echo
-    echo "Seleccione una opción:"
-    echo "1. Actividad 1 SUMA DE MATRICES"
-    echo "2. Actividad 2 RESTA DE MATRICES "
-    echo "3. Actividad 3 PRODUCTO ESCALAR"
-    echo "4. Actividad 4 PRODUCTO DE MATRICES"
-    echo "5. Salir "
-}
-
-# Ciclo para mostrar el menú y recibir la entrada del usuario
-opcion=0
-while [ $opcion -ne 5 ]
-do
-    mostrar_menu
-    read opcion
-    case $opcion in
-        1) java SumaMatrices 
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        2) java RestaMatrices
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        3) java ProductoEscalar
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        4) java ProductoMatrices
-            read -n 1 -s -r -p "Presione cualquier tecla para continuar...";;
-        5) "Adios buapo" ;;
-        *) "Opcion Invalida" ;;
-        
-    esac
-    if ! [[ "$opcion" =~ ^[1-6]+$ ]]; then
-        echo "Entrada no válida, por favor ingrese sólo caracteres numéricos del 1 al 5."
-        opcion=0
-    fi
+    java Main
 done
