@@ -59,7 +59,7 @@ Esta práctica fue hecha VSCode usando como lenguaje a java.
 
 ## Árbol de carpetas y archivos
 ```
-Practica3
+Practica4
 ├──────────Folder "src"
 │            ├───Lista.java (Interfaz)
 │            ├───ListaSimple.java
