@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * El codigo hace las operaciones basicas en una lista simple
  * 
@@ -42,6 +44,8 @@ public class ListaSimple implements Lista {
             actual.setSiguiente(elemento);
         }
     }
+
+
     /**
 	 * Metodo que elimina un elemento de la lista cualquiera. 
 	 * @param elemento de tipo Nodo

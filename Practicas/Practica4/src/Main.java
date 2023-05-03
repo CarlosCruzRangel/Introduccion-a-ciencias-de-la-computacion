@@ -1,3 +1,6 @@
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  * El codigo del menu para usar las operaciones
  * de la lista
@@ -7,9 +10,8 @@
  * 
  * @since 2 mayo 2023, UNAM
  * @version v1.0
- *  
+ * 
  */
-import java.util.Scanner;
 
 public class Main {
 
@@ -32,19 +34,20 @@ public class Main {
 
                 /*
                  * Este bloque de código maneja el caso en el que el usuario selecciona la
-                 * opción 1 del menú. Solicita al usuario que ingrese un valor para el nuevo
-                 * elemento, crea un nuevo nodo con ese valor, lo inserta al principio de la
+                 * opción 1 del menú.Se crea un nuevo nodo random, lo inserta al principio de la
                  * lista usando el método `insertarCabeza` de la clase `ListaSimple`, y luego
                  * imprime un mensaje indicando que el elemento fue insertado con éxito.
                  * Finalmente, imprime la lista actualizada utilizando el método `imprimirLista`
                  * de la clase `ListaSimple`.
                  */
                 case 1:
-                    System.out.print("\u001B[33m" + "Ingrese un valor para el elemento: " + "\u001B[0m");
-                    int valor = scanner.nextInt();
-                    Nodo nodoInicio = new Nodo(valor);
-                    lista.insertarCabeza(nodoInicio);
-                    System.out.println("\u001B[32m" + "\n Elemento insertado al inicio de la lista." + "\u001B[0m");
+                    Random rand1 = new Random();
+                    int valor1 = rand1.nextInt(100);
+                    Nodo nuevoNodo1 = new Nodo(valor1);
+                    lista.insertarCabeza(nuevoNodo1);
+                    System.out.println("\u001B[32m"
+                            + "\n Usted selecciono insertar al inicio, el programa le creara un elemento random... "
+                            + "\u001B[0m");
 
                     System.out.println("\n Elementos de la lista:");
                     lista.imprimirLista();
@@ -52,19 +55,21 @@ public class Main {
 
                 /*
                  * Este bloque de código maneja el caso en el que el usuario selecciona la
-                 * opción 2 del menú. Solicita al usuario que ingrese un valor para el nuevo
-                 * elemento, crea un nuevo nodo con ese valor, lo inserta al final de la lista
+                 * opción 2 del menú. Se crea un nuevo nodo random, lo inserta al final de la
+                 * lista
                  * usando el método `insertarCola` de la clase `ListaSimple`, y luego imprime un
                  * mensaje que indica que el elemento fue insertado con éxito. Finalmente,
                  * imprime la lista actualizada utilizando el método `imprimirLista` de la clase
                  * `ListaSimple`.
                  */
                 case 2:
-                    System.out.print("\u001B[33m" + "Ingrese un valor para el elemento: " + "\u001B[0m");
-                    int valor2 = scanner.nextInt();
-                    Nodo nodoFin = new Nodo(valor2);
-                    lista.insertarCola(nodoFin);
-                    System.out.println("\u001B[32m" + "Elemento insertado al final de la lista." + "\u001B[0m");
+                    Random rand2 = new Random();
+                    int valor2 = rand2.nextInt(100);
+                    Nodo nuevoNodo2 = new Nodo(valor2);
+                    lista.insertarCola(nuevoNodo2);
+                    System.out.println("\u001B[32m"
+                            + "Usted selecciono insertar al final, el programa le creara un elemento random... "
+                            + "\u001B[0m");
 
                     System.out.println("\n Elementos de la lista:");
                     lista.imprimirLista();
@@ -118,9 +123,9 @@ public class Main {
                     }
                     break;
 
-                /* 
+                /*
                  * Salir del programa
-                 */    
+                 */
                 case 7:
                     System.out.println("Hasta luego.");
                     break;

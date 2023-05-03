@@ -13,23 +13,23 @@ echo "|_______||___| |_______||_|  |__|  |___|  |_______||_|  |__||___| |______|
 
 
 
-echo "BIENVENIDO $USER A LA PRACTICA TRES "
+echo "BIENVENIDO $USER A LA PRACTICA CUATRO "
     date
 
 echo
-echo "EMPIEZA LA COMPILACION DE LA PRACTICA 3"
+echo "EMPIEZA LA COMPILACION DE LA PRACTICA 4"
 echo
     cd src
 
     javac *.java
 
-echo "TERMINA LA COMPILACION DE LA PRACTICA 3"
+echo "TERMINA LA COMPILACION DE LA PRACTICA 4"
 echo
 
 
 read -n 1 -s -r -p "Presione cualquier tecla para continuar..."
 echo
 \
-echo "EMPIEZA LA EJECUCION DE LA PRACTICA 3"
+echo "EMPIEZA LA EJECUCION DE LA PRACTICA 4"
     java Main
 done
